@@ -347,26 +347,28 @@ $(function () {
 
     // sliders 
 
-    if ($('.partners__list').length > 0) {
-        new Swiper('.partners__list', {
-            slidesPerView: 2,
-            spaceBetween: 20,
+    if ($('.promo__slider').length) {
+        new Swiper('.promo__slider', {
+            slidesPerView: 1,
             navigation: {
-                nextEl: ".partners__next",
-                prevEl: ".partners__prev"
+                nextEl: ".promo__next",
+                prevEl: ".promo__prev"
             },
-            breakpoints: {
-                479.98: {
-                    slidesPerView: 3,
-                },
-                991.98: {
-                    slidesPerView: 5,
-                }
+            pagination: {
+                el: '.promo__pagination',
+                clickable: true
             }
-
         });
+    }
 
-
+    if ($('.about__slider').length) {
+        new Swiper('.about__slider', {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: ".about__next",
+                prevEl: ".about__prev"
+            },
+        });
     }
 
 

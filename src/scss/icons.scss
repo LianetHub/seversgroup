@@ -18,6 +18,15 @@
 	}
 }
 
+.icon-star:before {
+	content: "\e910";
+}
+.icon-telegram:before {
+	content: "\e90f";
+}
+.icon-cursor:before {
+	content: "\e90e";
+}
 .icon-arrow-left:before {
 	content: "\e900";
 }
@@ -33,8 +42,11 @@
 .icon-check-circle:before {
 	content: "\e904";
 }
-.icon-chevron:before {
+.icon-chevron-left:before {
 	content: "\e905";
+}
+.icon-chevron-right:before {
+	content: "\e911";
 }
 .icon-clock:before {
 	content: "\e906";

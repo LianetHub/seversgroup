@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     @@include('html/_head.html', {
-    'title': 'Северлесгрупп'
+    'title': 'Лефрат'
     })
     <body>
         <div class="wrapper">
@@ -10,13 +10,59 @@
                 <section class="promo">
                     <div class="promo__container">
                         <div class="promo__body">
-                            <div class="promo__side"></div>
+                            <div class="promo__side">
+                                <a href="" class="promo__card" style="background-image: url('@img/promo/01.webp');">
+                                    <span class="promo__card-label">Популярное</span>
+                                    <span class="promo__card-title">Брус обрезной</span>
+                                </a>
+                                <a href="" class="promo__card" style="background-image: url('@img/promo/03.webp');">
+                                    <span class="promo__card-label">Популярное</span>
+                                    <span class="promo__card-title">Доска обрезная</span>
+                                </a>
+                            </div>
                             <div class="promo__slider swiper">
                                 <div class="swiper-wrapper">
+                                    <div class="promo__slide swiper-slide" style="background-image: url('@img/promo/banner-01.webp');">
+                                        <h1 class="promo__slide-title">
+                                            <span class="color-accent">СКИДКА</span>
+                                            НА ДОСТАВКУ
+                                            <span class="color-accent">10%</span>
+                                        </h1>
+                                        <ul class="promo__slide-list ">
+                                            <li>Погрузка пиломатериала – бесплатно</li>
+                                            <li>Распил пиломатериала* - бесплатно.</li>
+                                        </ul>
+                                        <a href="" class="promo__slide-btn btn btn-primary icon-cart">Перейти в каталог</a>
+                                    </div>
+                                    <div class="promo__slide swiper-slide" style="background-image: url('@img/promo/banner-02.webp');">
+                                        <div class="promo__slide-title">
+                                            <strong class="color-accent">БОЛЕЕ 13 ЛЕТ</strong>
+                                            производим пиломатериалы оптом и в розницу по лучшей цене в Москве
+                                        </div>
 
+                                        <ul class="promo__slide-list">
+                                            <li>Погрузка пиломатериала – бесплатно</li>
+                                            <li>Распил пиломатериала* - бесплатно.</li>
+                                        </ul>
+                                        <a href="" class="promo__slide-btn btn btn-primary icon-cart">Перейти в каталог</a>
+                                    </div>
+                                </div>
+                                <div class="promo__controls">
+                                    <button type="button" class="promo__prev swiper-button-prev"></button>
+                                    <div class="promo__pagination swiper-pagination"></div>
+                                    <button type="button" class="promo__next swiper-button-next"></button>
                                 </div>
                             </div>
-                            <div class="promo__side"></div>
+                            <div class="promo__side">
+                                <a href="" class="promo__card" style="background-image: url('@img/promo/02.webp');">
+                                    <span class="promo__card-label">Популярное</span>
+                                    <span class="promo__card-title">Блок-хаус</span>
+                                </a>
+                                <a href="" class="promo__card" style="background-image: url('@img/promo/04.webp');">
+                                    <span class="promo__card-label">Популярное</span>
+                                    <span class="promo__card-title">Евровагонка</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -25,9 +71,9 @@
                     <div class="catalog__container">
                         <h2 class="catalog__title">В нашем каталоге более 10 000 пиломатериалов доступны для заказа</h2>
                         <ul class="catalog__list">
-                            @@loop('./html/templates/_catalog-card.html', './html/json/catalog.json')
+                            @@loop('./html/templates/_card.html', './html/json/catalog.json')
                         </ul>
-                        <a href="" class="catalog__btn btn btn-primary icon-chevron">Перейти в каталог</a>
+                        <a href="" class="catalog__btn btn btn-secondary icon-chevron-right">Перейти в каталог</a>
                     </div>
                 </section>
                 <section class="products">
@@ -45,6 +91,216 @@
                         </div>
                     </div>
                 </section>
+                <section class="about">
+                    <div class="about__container">
+                        <div class="about__body">
+                            <div class="about__main">
+                                <h2 class="about__title">
+                                    О компании <span class="color-accent">СеверЛесГруп</span>
+                                </h2>
+                                <div class="about__desc">
+                                    <p>Компания «СеверЛесГруп» производит и реализует пиломатериалы оптом и в розницу. При изготовлении продукции используется экологически чистое высококачественное сырье. Обработка выполняется на новейшем оборудовании с полным соблюдением всех действующих норм и стандартов.</p>
+                                    <p>Контроль производства осуществляется на каждом этапе, поэтому продукцию отличает точная геометрия. Поверхности пиломатериалов соответствуют указанному сорту.</p>
+                                    <p>Свою деятельность мы начали в 2008 году и с тех пор смогли заслужить доверие многих заказчиков. В ассортименте представлена различная продукция – строганная и обрезная доска, брус, вагонка и множество других видов пиломатериала.</p>
+                                    <p>Обращаясь в компанию «СеверЛесГруп», клиенты застрахованы от любых неожиданностей и в одном месте получают весь спектр услуг. Выбирайте удобную схему расчетов, оформляйте заявку на доставку и получайте пиломатериал достойного качества в кратчайшие сроки!</p>
+                                </div>
+                            </div>
+                            <div class="about__visual">
+                                <ul class="about__benefits">
+                                    <li class="about__benefit">
+                                        <div class="about__benefit-value">13+</div>
+                                        <div class="about__benefit-desc"> лет успешной работы</div>
+                                    </li>
+                                    <li class="about__benefit">
+                                        <div class="about__benefit-value">1500+</div>
+                                        <div class="about__benefit-desc">Государственных заказов</div>
+                                    </li>
+                                    <li class="about__benefit">
+                                        <div class="about__benefit-value">13+</div>
+                                        <div class="about__benefit-desc">Крупных поставщиков</div>
+                                    </li>
+                                </ul>
+                                <div class="about__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="about__slide swiper-slide">
+                                            <img src="@img/about_slider_1.webp" class="cover-image" alt="О компании">
+                                        </div>
+                                        <div class="about__slide swiper-slide">
+                                            <img src="@img/about_slider_1.webp" class="cover-image" alt="О компании">
+                                        </div>
+                                        <div class="about__slide swiper-slide">
+                                            <img src="@img/about_slider_1.webp" class="cover-image" alt="О компании">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="about__prev swiper-button-prev"></button>
+                                    <button type="button" class="about__next swiper-button-next"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="steps">
+                    <div class="steps__container">
+                        <h2 class="steps__title">Этапы работ с нами</h2>
+                        <ol class="steps__list">
+                            <li class="steps__item">
+                                <div class="steps__item-num">01</div>
+                                <div class="steps__item-icon">
+                                    <img src="@img/steps/etap_1.webp" alt="Иконка">
+                                </div>
+                                <div class="steps__item-desc">Оставляете заявку на нашем сайте или позвонив по телефону</div>
+                                <a href="tel:+74950779777" class="steps__item-link">+7 (495) 077-97-77</a>
+                            </li>
+                            <li class="steps__item">
+                                <div class="steps__item-num">02</div>
+                                <div class="steps__item-icon">
+                                    <img src="@img/steps/etap_2.webp" alt="Иконка">
+                                </div>
+                                <div class="steps__item-desc">Cогласовываем Ваш заказ и уточняем детали</div>
+                            </li>
+                            <li class="steps__item">
+                                <div class="steps__item-num">03</div>
+                                <div class="steps__item-icon">
+                                    <img src="@img/steps/etap_3.webp" alt="Иконка">
+                                </div>
+                                <div class="steps__item-desc">Вы оплачиваете заказ любым удобным способом</div>
+                            </li>
+                            <li class="steps__item">
+                                <div class="steps__item-num">04</div>
+                                <div class="steps__item-icon">
+                                    <img src="@img/steps/etap_4.webp" alt="Иконка">
+                                </div>
+                                <div class="steps__item-desc">Мы собираем ваш заказ на складе</div>
+                            </li>
+                            <li class="steps__item">
+                                <div class="steps__item-num">05</div>
+                                <div class="steps__item-icon">
+                                    <img src="@img/steps/etap_5.webp" alt="Иконка">
+                                </div>
+                                <div class="steps__item-desc">Доставляем Ваш заказ точно в срок!</div>
+                            </li>
+                        </ol>
+                    </div>
+                </section>
+                <section class="reviews">
+                    <div class="reviews__container">
+                        <h2 class="reviews__title">Более 1600 довольных клиентов рекомендуют нас</h2>
+                        <ul class="reviews__list">
+                            <li class="reviews__item">
+                                <div class="reviews__item-header">
+                                    <div class="reviews__item-author">Арина Крылова</div>
+                                    <time datetime="2024-09-14" class="reviews__item-time">14 сентября 2024</time>
+                                </div>
+                                <div class="reviews__item-rate">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    5
+                                </div>
+                                <blockquote class="reviews__item-quote">
+                                    Сегодня попросила своих рабочих встретить мой заказ пиломатериалов от замечательной компании СеверЛесГрупп в Химках. Заказывала строганную доску, качество соответствует цене. Очень хорошая доска. Отдельную благодарность выражаю менеджерам и ассистентам компании, были на связи со мной 24/7. Также у компании есть собственная доставка.
+                                </blockquote>
+                            </li>
+                            <li class="reviews__item">
+                                <div class="reviews__item-header">
+                                    <div class="reviews__item-author">Годунова Дарья</div>
+                                    <time datetime="2024-09-03" class="reviews__item-time">3 сентября 2024</time>
+                                </div>
+                                <div class="reviews__item-rate">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    5
+                                </div>
+                                <blockquote class="reviews__item-quote">
+                                    Недавно приобрела в этом магазине доски сухие строганные из лиственницы для ремонта дома. Изделия выполнены качественно, цвет и материал соответствуют заявленному. Сколов и трещин не было, всё пришло в срок и в лучшем состоянии. В дальнейшем планирую заказывать пиломатериалы именно здесь.
+                                </blockquote>
+                            </li>
+                            <li class="reviews__item">
+                                <div class="reviews__item-header">
+                                    <div class="reviews__item-author">Роман Петров</div>
+                                    <time datetime="2024-08-31" class="reviews__item-time">31 августа 2024</time>
+                                </div>
+                                <div class="reviews__item-rate">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    5
+                                </div>
+                                <blockquote class="reviews__item-quote">
+                                    Недавно приобрел пиломатериалы в компании СеверЛесГруп в Химках. Очень доволен качеством продукции и обслуживанием. Менеджеры были вежливы и профессиональны, помогли быстро подобрать нужные материалы. Цены вполне приемлемые, а доставка была быстрой. Особенно ... порадовало, что компания предлагает широкий ассортимент товаров. Рекомендую всем, кто ищет надежного поставщика пиломатериалов.
+                                </blockquote>
+                            </li>
+                            <li class="reviews__item">
+                                <div class="reviews__item-header">
+                                    <div class="reviews__item-author">Ирина Кузнецова</div>
+                                    <time datetime="2024-08-16" class="reviews__item-time">16 августа 2024</time>
+                                </div>
+                                <div class="reviews__item-rate">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    5
+                                </div>
+                                <blockquote class="reviews__item-quote">
+                                    Благодарю компанию SeverLesGroup, за отлично предоставленный сервис . Приобретали брусья на баню. Древесина очень качественная и ее большой выбор. Отдельное спасибо персоналу, за их отзывчивость и скрупулезность в работе. За древесиной теперь только сюда, всем рекомендую👍👍👍
+                                </blockquote>
+                            </li>
+                            <li class="reviews__item">
+                                <div class="reviews__item-header">
+                                    <div class="reviews__item-author">Ульяна Филатова</div>
+                                    <time datetime="2024-08-10" class="reviews__item-time">10 августа 2024</time>
+                                </div>
+                                <div class="reviews__item-rate">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    5
+                                </div>
+                                <blockquote class="reviews__item-quote">
+                                    Нам в дом срочно нужна была сухая строганная доска. Случайно с мужем наткнулись на эту кампанию и не пожалели. Нам в течении недели уже доставили доски. Проверили на месте, оплатили уже после доставки. Доски качественные, просушенные. Мы их сразу постелили! Муж в восторге, кому ... нужны доски - обращайтесь именно к ним, и цена ниже, чем у конкурентов!
+                                </blockquote>
+                            </li>
+                            <li class="reviews__item">
+                                <div class="reviews__item-header">
+                                    <div class="reviews__item-author">Екатерина Митасова</div>
+                                    <time datetime="2024-08-31" class="reviews__item-time">14 сентября 2024</time>
+                                </div>
+                                <div class="reviews__item-rate">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    5
+                                </div>
+                                <blockquote class="reviews__item-quote">
+                                    Хороший магазин стройматериалов. Заказывали вагонку из липы для бани. Оставили заявку на сайте, через минут 15 нам перезвонил менеджер. Приятная девушка уточнила размер вагонки и адрес доставки. Оплатили и на следующий день нам уже привезли. Вагонка качественная, без сколов и трещин, размер один к одному. Если еще потребуются материалы из дерева, заказывать будем здесь.
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="articles">
+                    <div class="articles__container">
+                        <h2 class="articles__title">Полезные статьи</h2>
+                        <ul class="articles__list">
+                            @@loop('./html/templates/_card.html', './html/json/articles.json')
+                        </ul>
+                        <a href="" class="articles__more btn btn-secondary btn-sm">Показать больше</a>
+                    </div>
+                </section>
+                @@include('./html/_calc.html',{})
                 @@include('html/_purchase.html', {})
                 <article class="article">
                     <div class="article__container">
@@ -158,7 +414,7 @@
                 </article>
             </main>
             @@include('html/_footer.html', {})
-            <!-- @@include('html/_modal.html', {}) -->
+            @@include('html/_modal.html', {})
             @@include('html/_js.html', {})
         </div>
     </body>
