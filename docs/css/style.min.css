@@ -1,0 +1,557 @@
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+.article ul li::before, [class^=icon-]:before,
+[class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^=icon-]:before,
+[class*=" icon-"]:before {
+  display: block;
+}
+
+.icon-arrow-left:before {
+  content: "\e900";
+}
+
+.icon-arrow-right:before {
+  content: "\e901";
+}
+
+.icon-cart:before {
+  content: "\e902";
+}
+
+.icon-check:before {
+  content: "\e903";
+}
+
+.icon-check-circle:before, .article ul li:before {
+  content: "\e904";
+}
+
+.icon-chevron:before {
+  content: "\e905";
+}
+
+.icon-clock:before {
+  content: "\e906";
+}
+
+.icon-compare:before {
+  content: "\e907";
+}
+
+.icon-envelope:before {
+  content: "\e908";
+}
+
+.icon-heart:before {
+  content: "\e909";
+}
+
+.icon-location:before {
+  content: "\e90a";
+}
+
+.icon-phone:before {
+  content: "\e90b";
+}
+
+.icon-search:before {
+  content: "\e90c";
+}
+
+.icon-whatsapp:before {
+  content: "\e90d";
+}
+
+:root {
+  --primary: #2e3c53;
+  --primary-01: rgba(46, 60, 83, 0.1);
+  --primary-02: rgba(46, 60, 83, 0.2);
+  --primary-03: rgba(46, 60, 83, 0.3);
+  --primary-04: rgba(46, 60, 83, 0.4);
+  --primary-05: rgba(46, 60, 83, 0.5);
+  --primary-06: rgba(46, 60, 83, 0.6);
+  --primary-07: rgba(46, 60, 83, 0.7);
+  --primary-08: rgba(46, 60, 83, 0.8);
+  --primary-09: rgba(46, 60, 83, 0.9);
+  --accent: #7cbe69;
+  --accent-06: #7cbe69;
+  --secondary: #3c8d24;
+  --grey: #c4c4c4;
+  scrollbar-color: var(--secondary) var(--accent);
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  min-width: 20rem;
+  min-height: 100%;
+  line-height: normal;
+  color: var(--primary);
+  background-color: #fff;
+}
+@media (max-width: 991.98px) {
+  body:has(.menu.active) {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+[class*=__container] {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 0.75rem;
+}
+@media (min-width: 575.98px) {
+  [class*=__container] {
+    box-sizing: content-box;
+    max-width: 33.75rem;
+  }
+}
+@media (min-width: 767.98px) {
+  [class*=__container] {
+    max-width: 45rem;
+  }
+}
+@media (min-width: 991.98px) {
+  [class*=__container] {
+    max-width: 60rem;
+  }
+}
+@media (min-width: 1199.98px) {
+  [class*=__container] {
+    max-width: 71.25rem;
+  }
+}
+@media (min-width: 1399.98px) {
+  [class*=__container] {
+    max-width: 82.5rem;
+  }
+}
+
+.h1,
+h1 {
+  color: var(--MainBlack);
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 35px;
+}
+@media (min-width: 575.98px) {
+  .h1,
+  h1 {
+    font-size: 45px;
+    line-height: 65px;
+  }
+}
+
+.h2,
+h2 {
+  font-size: 22px;
+  line-height: 25px;
+}
+@media (min-width: 1199.98px) {
+  .h2,
+  h2 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
+
+.h2,
+.h3,
+h2,
+h3 {
+  color: var(--MainBlack);
+  font-weight: 700;
+}
+
+.h3,
+h3 {
+  letter-spacing: 0.02em;
+  font-size: 20px;
+  line-height: 22px;
+}
+@media (min-width: 1199.98px) {
+  .h3,
+  h3 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+}
+
+.h6,
+h6 {
+  color: var(--MainBlack);
+  font-weight: 400;
+  line-height: 20px;
+  opacity: 0.5;
+  font-size: 18px;
+}
+@media (min-width: 1199.98px) {
+  .h6,
+  h6 {
+    font-size: 20px;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+h2,
+.h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+@media (min-width: 767.98px) {
+  h2,
+  .h2 {
+    letter-spacing: 0.01em;
+    font-size: 2rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+.color-accent {
+  color: var(--accent);
+}
+
+.color-secondary {
+  color: var(--secondary);
+}
+
+.color-grey {
+  color: var(--grey);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fa7a93;
+  border-radius: 0.5rem;
+}
+@media (any-hover: hover) {
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f8496b;
+  }
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.form__field {
+  border: 1px solid;
+}
+
+input {
+  min-height: 58px;
+}
+
+.btn {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 1.125em 1.4375em;
+  gap: 0.5rem;
+  border: 0.0625rem solid;
+}
+.btn::before {
+  order: 1;
+  font-size: 0.65em;
+}
+.btn:focus-visible {
+  box-shadow: 0 0 0.0625rem 0.0625rem var(--primary);
+}
+.btn.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+.btn.btn-primary:hover {
+  background: #fff;
+  color: var(--primary);
+}
+.btn.btn-primary:active {
+  color: var(--primary-08);
+  border-color: var(--primary-08);
+}
+.btn.btn-sm {
+  padding: 0.44rem 1rem;
+  border-radius: 0.5rem;
+  min-height: 2.25rem;
+}
+.btn.btn-fullwidth {
+  width: 100%;
+  padding-inline: 1rem;
+}
+.btn:disabled, .btn[aria-disabled=true] {
+  cursor: default;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.benefits {
+  padding: 1.5625rem 0 1.25rem;
+}
+.benefits__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.benefits__card {
+  padding: 1.5625rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.0625rem 0.625rem rgba(0, 0, 0, 0.11);
+  gap: 1.5rem;
+  text-align: left;
+  justify-content: start;
+}
+.benefits__card-icon {
+  width: 4.125rem;
+  height: 4.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.benefits__card-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.1111111111;
+  min-height: 2.5rem;
+}
+.benefits__card-desc {
+  line-height: 1.125;
+}
+
+.catalog {
+  padding: 2.5rem 0;
+}
+.catalog__title {
+  text-align: center;
+}
+.catalog__list {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.catalog__card {
+  box-shadow: 0 0.09375rem 0.625rem rgba(0, 0, 0, 0.12);
+  display: block;
+  background-color: #c4c4c4;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  transition: box-shadow 0.3s ease;
+}
+@media (any-hover: hover) {
+  .catalog__card:hover {
+    box-shadow: 0 0.2875rem 1.8125rem rgba(0, 0, 0, 0.12);
+  }
+  .catalog__card:hover .catalog__card-title {
+    color: var(--accent);
+  }
+  .catalog__card:hover .catalog__card-icon {
+    background: var(--accent);
+    color: #fff;
+  }
+}
+.catalog__card-image {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 33.333%;
+}
+.catalog__card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.catalog__card-quantity {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #fff;
+  padding: 0.375rem 0.5rem 0.3125rem;
+  font-weight: 500;
+  font-size: 0.625rem;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--primary-07);
+  border-radius: 62.4375rem;
+}
+.catalog__card-desc {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 1rem 3rem;
+  position: relative;
+}
+.catalog__card-icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2.5rem;
+  height: 2.3125rem;
+  font-size: 1.375rem;
+  box-shadow: 0 0.09375rem 0.6625rem rgba(0, 0, 0, 0.12);
+  border-radius: 0.5625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-02);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.catalog__card-title {
+  font-size: 1.125rem;
+  line-height: 1.1666666667;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+.catalog__btn {
+  margin-top: 2.5rem;
+}
+
+.article {
+  padding: 6.5625rem 0 4.6875rem;
+}
+.article .h1,
+.article h1 {
+  font-size: 2.1875rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.article .h1:not(:last-child),
+.article h1:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+.article .h6,
+.article h6 {
+  margin-bottom: 2.875rem;
+}
+.article .h2,
+.article h2 {
+  font-size: 1.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin: 2.8125rem 0 1.6875rem;
+}
+.article .h3,
+.article h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.article p {
+  font-size: 1.125rem;
+  letter-spacing: 0.01em;
+  line-height: 1.4444444444;
+}
+.article p:not(:last-child) {
+  margin-bottom: 1.5625rem;
+}
+.article ul {
+  font-size: 1.125rem;
+  line-height: 1.9444444444;
+  text-transform: capitalize;
+}
+.article ul li {
+  display: flex;
+  gap: 0.5rem;
+  line-height: 1.5;
+}
+.article ul li::before {
+  color: var(--accent);
+  align-self: flex-start;
+  min-height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.article strong {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+@media (min-width: 991.98px) {
+  .article .columns {
+    column-count: 2;
+    break-inside: avoid;
+  }
+  .article .columns p {
+    line-height: 1.5;
+  }
+}

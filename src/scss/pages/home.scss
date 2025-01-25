@@ -1,0 +1,236 @@
+.benefits {
+	padding: rem(25) 0 rem(20);
+	// .benefits__container
+	&__container {
+	}
+	// .benefits__cards
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5rem;
+	}
+	// .benefits__card
+	&__card {
+		padding: rem(25) rem(20);
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		background: #fff;
+		border-radius: 0.5rem;
+		box-shadow: 0 rem(1) rem(10) rgba(0, 0, 0, 0.11);
+		gap: rem(24);
+		text-align: left;
+		justify-content: start;
+	}
+	// .benefits__card-icon
+	&__card-icon {
+		width: rem(66);
+		height: rem(66);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .benefits__card-title
+	&__card-title {
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: math.div(20, 18);
+		min-height: rem(40);
+	}
+	// .benefits__card-desc
+	&__card-desc {
+		line-height: math.div(18, 16);
+	}
+}
+
+.catalog {
+	padding: rem(40) 0;
+	// .catalog__container
+	&__container {
+	}
+	// .catalog__title
+	&__title {
+		text-align: center;
+	}
+	// .catalog__list
+	&__list {
+		margin-top: 3rem;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5rem;
+	}
+	// .catalog__item
+	&__item {
+	}
+	// .catalog__card
+	&__card {
+		box-shadow: 0 rem(1.5) rem(10) rgba(0, 0, 0, 0.12);
+		display: block;
+		background-color: #c4c4c4;
+		border-radius: 1rem;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		transition: box-shadow 0.3s ease;
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 rem(4.6) rem(29) rgba(0, 0, 0, 0.12);
+				.catalog__card-title {
+					color: $accent;
+				}
+				.catalog__card-icon {
+					background: $accent;
+					color: $white;
+				}
+			}
+		}
+	}
+	// .catalog__card-image
+	&__card-image {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 33.333%;
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	// .catalog__card-quantity
+	&__card-quantity {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background: #fff;
+		padding: rem(6) rem(8) rem(5);
+		font-weight: 500;
+		font-size: rem(10);
+		line-height: math.div(11, 10);
+		letter-spacing: 0.02em;
+		color: $text-07;
+		border-radius: rem(999);
+	}
+	// .catalog__card-desc
+	&__card-desc {
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		background: #fff;
+		padding: 1rem 3rem;
+		position: relative;
+	}
+	// .catalog__card-icon
+	&__card-icon {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		width: rem(40);
+		height: rem(37);
+		font-size: rem(22);
+		box-shadow: 0 rem(1.5) rem(10.6) rgba(0, 0, 0, 0.12);
+		border-radius: rem(9);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $text-02;
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+	// .catalog__card-title
+	&__card-title {
+		font-size: rem(18);
+		line-height: math.div(21, 18);
+		font-weight: 700;
+		transition: color 0.3s ease;
+	}
+	// .catalog__card-price
+	&__card-price {
+	}
+	// .catalog__btn
+	&__btn {
+		margin-top: rem(40);
+	}
+}
+
+.article {
+	padding: rem(105) 0 rem(75);
+	// .article__container
+	&__container {
+	}
+	& .h1,
+	h1 {
+		font-size: rem(35);
+		font-weight: 700;
+		line-height: math.div(35, 35);
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+
+	& .h6,
+	h6 {
+		margin-bottom: rem(46);
+	}
+
+	& .h2,
+	h2 {
+		font-size: rem(25);
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		line-height: 1;
+		margin: rem(45) 0 rem(27);
+	}
+	& .h3,
+	h3 {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	& p {
+		font-size: rem(18);
+		letter-spacing: 0.01em;
+		line-height: math.div(26, 18);
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+		}
+	}
+
+	& ul {
+		font-size: rem(18);
+		line-height: math.div(35, 18);
+		// padding-left: em(24, 18);
+		text-transform: capitalize;
+		& li {
+			display: flex;
+			gap: 0.5rem;
+			line-height: math.div(24, 16);
+			&::before {
+				@extend %ic, .icon-check-circle;
+				color: $accent;
+				align-self: flex-start;
+				min-height: rem(24);
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+			}
+		}
+	}
+
+	& strong {
+		font-size: rem(20);
+		font-weight: 500;
+	}
+
+	& .columns {
+		@media (min-width: $md3) {
+			column-count: 2;
+			break-inside: avoid;
+			& p {
+				line-height: math.div(27, 18);
+			}
+		}
+	}
+}

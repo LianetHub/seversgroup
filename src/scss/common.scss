@@ -1,0 +1,125 @@
+:root {
+	--primary: #2e3c53;
+	--primary-01: rgba(46, 60, 83, 0.1);
+	--primary-02: rgba(46, 60, 83, 0.2);
+	--primary-03: rgba(46, 60, 83, 0.3);
+	--primary-04: rgba(46, 60, 83, 0.4);
+	--primary-05: rgba(46, 60, 83, 0.5);
+	--primary-06: rgba(46, 60, 83, 0.6);
+	--primary-07: rgba(46, 60, 83, 0.7);
+	--primary-08: rgba(46, 60, 83, 0.8);
+	--primary-09: rgba(46, 60, 83, 0.9);
+	--accent: #7cbe69;
+	--accent-06: #7cbe69;
+	--secondary: #3c8d24;
+	--grey: #c4c4c4;
+	scrollbar-color: var(--secondary) var(--accent);
+	scrollbar-width: thin;
+}
+
+body {
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 1rem;
+	min-width: rem($minWidth);
+	min-height: 100%;
+	line-height: normal;
+	color: $text;
+	background-color: $white;
+	&:has(.menu.active) {
+		@media (max-width: $md3) {
+			overflow: hidden;
+		}
+	}
+}
+
+// ================== ОБОЛОЧКА ==============================
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+// ================== ОБОЛОЧКА ===============================
+
+// ================== LAYOUT =================================
+
+[class*="__container"] {
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 0 rem(12);
+	@media (min-width: $md5) {
+		box-sizing: content-box;
+		max-width: rem(540);
+	}
+	@media (min-width: $md4) {
+		max-width: rem(720);
+	}
+	@media (min-width: $md3) {
+		max-width: rem(960);
+	}
+	@media (min-width: $md2) {
+		max-width: rem(1140);
+	}
+	@media (min-width: $md1) {
+		max-width: $maxWidthContainer;
+	}
+}
+
+//=============== LAYOUT ===============================
+
+.h1,
+h1 {
+	color: var(--MainBlack);
+	font-weight: 800;
+	@media (min-width: $md5) {
+		font-size: 45px;
+		line-height: 65px;
+	}
+	font-size: 25px;
+	line-height: 35px;
+}
+
+.h2,
+h2 {
+	font-size: 22px;
+	line-height: 25px;
+	@media (min-width: $md2) {
+		font-size: 35px;
+		line-height: 35px;
+	}
+}
+
+.h2,
+.h3,
+h2,
+h3 {
+	color: var(--MainBlack);
+	font-weight: 700;
+}
+
+.h3,
+h3 {
+	letter-spacing: 0.02em;
+	font-size: 20px;
+	line-height: 22px;
+	@media (min-width: $md2) {
+		font-size: 25px;
+		line-height: 25px;
+	}
+}
+
+.h6,
+h6 {
+	color: var(--MainBlack);
+	font-weight: 400;
+	line-height: 20px;
+	opacity: 0.5;
+	font-size: 18px;
+	@media (min-width: $md2) {
+		font-size: 20px;
+	}
+}
