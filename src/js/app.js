@@ -56,10 +56,10 @@ $(function () {
 
     function initTabs() {
         $('.tabs').each(function () {
-            $(this).find('.tab-btn').each(function (index) {
+            $(this).find('.tabs__btn').each(function (index) {
                 if (index == 0) $(this).addClass('active');
             });
-            $(this).find(".tab-content").each(function (index) {
+            $(this).find(".tabs__content").each(function (index) {
                 if (index == 0) {
                     $(this).addClass('active');
                 } else {
@@ -74,172 +74,173 @@ $(function () {
 
     // custom select 
 
-    $('select').each(function () {
-        var $this = $(this), numberOfOptions = $(this).children('option').length;
-        $this.addClass('select-hidden');
-        $this.wrap('<div class="select"></div>');
-        $this.after('<div class="select-styled"></div>');
+    // $('select').each(function () {
+    //     var $this = $(this), numberOfOptions = $(this).children('option').length;
+    //     $this.addClass('select-hidden');
+    //     $this.wrap('<div class="select"></div>');
+    //     $this.after('<div class="select-styled"></div>');
 
-        var $styledSelect = $this.next('div.select-styled');
-        $styledSelect.text($this.children('option').eq(0).text());
+    //     var $styledSelect = $this.next('div.select-styled');
+    //     $styledSelect.text($this.children('option').eq(0).text());
 
-        var $list = $('<ul />', {
-            'class': 'select-options'
-        }).insertAfter($styledSelect);
+    //     var $list = $('<ul />', {
+    //         'class': 'select-options'
+    //     }).insertAfter($styledSelect);
 
-        // custom select
-        for (var i = 0; i < numberOfOptions; i++) {
-            $('<li />', {
-                text: $this.children('option').eq(i).text(),
-                'aria-label': $this.children('option').eq(i).val()
-            }).appendTo($list);
-        }
-        var $listItems = $list.children('li');
-        $($listItems[0]).addClass('active')
-        $listItems.on("click", (function (e) {
-            e.stopPropagation();
-            $styledSelect.text($(this).text()).removeClass('active').addClass('selected');;
-            $this.val($(this).attr('aria-label'));
-            $(this).addClass('active').siblings().removeClass('active');
-            $list.hide();
-        }));
+    //     // custom select
+    //     for (var i = 0; i < numberOfOptions; i++) {
+    //         $('<li />', {
+    //             text: $this.children('option').eq(i).text(),
+    //             'aria-label': $this.children('option').eq(i).val()
+    //         }).appendTo($list);
+    //     }
+    //     var $listItems = $list.children('li');
+    //     $($listItems[0]).addClass('active')
+    //     $listItems.on("click", (function (e) {
+    //         e.stopPropagation();
+    //         $styledSelect.text($(this).text()).removeClass('active').addClass('selected');;
+    //         $this.val($(this).attr('aria-label'));
+    //         $(this).addClass('active').siblings().removeClass('active');
+    //         $list.hide();
+    //     }));
 
-        $styledSelect.on("click", (function (e) {
-            e.stopPropagation();
-            $('div.select-styled.active').not(this).each(function () {
-                $(this).removeClass('active').next('ul.select-options').hide();
-            });
-            $(this).toggleClass('active').next('ul.select-options').toggle();
-        }));
+    //     $styledSelect.on("click", (function (e) {
+    //         e.stopPropagation();
+    //         $('div.select-styled.active').not(this).each(function () {
+    //             $(this).removeClass('active').next('ul.select-options').hide();
+    //         });
+    //         $(this).toggleClass('active').next('ul.select-options').toggle();
+    //     }));
 
-        $(document).on("click", (function () {
-            $styledSelect.removeClass('active');
-            $list.hide();
-        }));
+    //     $(document).on("click", (function () {
+    //         $styledSelect.removeClass('active');
+    //         $list.hide();
+    //     }));
 
-    });
+    // });
 
 
     // event handlers
 
     $(document).on('click', (e) => {
-        let $target = $(e.target);
 
+        const $target = $(e.target);
 
-        // catalog
-        if ($target.hasClass('catalog__btn') || (!$target[0].closest('.catalog') && $('.catalog__btn').hasClass('active'))) {
-            getСatalog()
+        // open menu 3 lvl
+        if ($target.is('.submenu__arrow')) {
+            e.preventDefault()
+            $target.parent().toggleClass('active').next().slideToggle()
         }
 
-        // tabs
-
-        if ($target.hasClass('tab-btn')) {
+        //  tabs
+        if ($target.is('.tabs__btn')) {
             $target.addClass("active")
                 .siblings()
                 .removeClass("active")
                 .closest(".tabs")
-                .find(".tab-content")
+                .find(".tabs__content")
                 .removeClass('active')
                 .eq($target.index())
                 .addClass('active')
         }
 
-        // catalog accordion on mobile
-        if ($target.hasClass('catalog__product-title')) {
-            $target.toggleClass('active');
-            $target.next().slideToggle();
-            $target.parent().siblings()
-                .find('.catalog__product-title').removeClass('active').next().slideUp();
-            $('.catalog__side-btn').removeClass('active');
-            $('.catalog__side-btn').eq($target.parent().index()).addClass('active');
-            $('.catalog__product').removeClass('active');
-            $target.parent().addClass('active');
 
-        }
+        // // catalog accordion on mobile
+        // if ($target.hasClass('catalog__product-title')) {
+        //     $target.toggleClass('active');
+        //     $target.next().slideToggle();
+        //     $target.parent().siblings()
+        //         .find('.catalog__product-title').removeClass('active').next().slideUp();
+        //     $('.catalog__side-btn').removeClass('active');
+        //     $('.catalog__side-btn').eq($target.parent().index()).addClass('active');
+        //     $('.catalog__product').removeClass('active');
+        //     $target.parent().addClass('active');
 
-        // catalog filter accordion
-        if ($target.hasClass('products__sidebar-btn')) {
-            $target.toggleClass('active');
-            $target.next().toggleClass('active');
-            $target.parent().siblings()
-                .find('.products__sidebar-btn').removeClass('active').next().removeClass('active');
-        }
+        // }
 
-        // catalog filter on mobile
-        if ($target.hasClass('products__filter') || $target.hasClass('products__sidebar-close')
-            || (!$target[0].closest('.products__sidebar') && $('.products__sidebar').hasClass('active'))) {
-            $('.products__sidebar').toggleClass('active');
-        }
+        // // catalog filter accordion
+        // if ($target.hasClass('products__sidebar-btn')) {
+        //     $target.toggleClass('active');
+        //     $target.next().toggleClass('active');
+        //     $target.parent().siblings()
+        //         .find('.products__sidebar-btn').removeClass('active').next().removeClass('active');
+        // }
 
-        // search on mobile
-        if ($target.hasClass('search__btn')) {
-            $target.addClass('active');
-            $target.next().addClass('open');
-            setTimeout(() => {
-                $target.next().find('input')[0].focus()
-            }, 300)
-        }
+        // // catalog filter on mobile
+        // if ($target.hasClass('products__filter') || $target.hasClass('products__sidebar-close')
+        //     || (!$target[0].closest('.products__sidebar') && $('.products__sidebar').hasClass('active'))) {
+        //     $('.products__sidebar').toggleClass('active');
+        // }
 
-        // counter
+        // // search on mobile
+        // if ($target.hasClass('search__btn')) {
+        //     $target.addClass('active');
+        //     $target.next().addClass('open');
+        //     setTimeout(() => {
+        //         $target.next().find('input')[0].focus()
+        //     }, 300)
+        // }
 
-        if ($target[0].closest('.product__counter')) {
-            let $counter = $target.closest('.product__counter')
-            let $countValue = $counter.find('.product__counter-value');
-            let $countPrev = $counter.find('.product__counter-btn.decrement');
-            let $countNext = $counter.find('.product__counter-btn.increment');
+        // // counter
+
+        // if ($target[0].closest('.product__counter')) {
+        //     let $counter = $target.closest('.product__counter')
+        //     let $countValue = $counter.find('.product__counter-value');
+        //     let $countPrev = $counter.find('.product__counter-btn.decrement');
+        //     let $countNext = $counter.find('.product__counter-btn.increment');
 
 
 
-            if ($target[0] == $countPrev[0]) {
-                if (+$countValue.text() <= 1) {
-                    $countValue.text(1)
-                    return;
-                }
-                $countValue.text(+$countValue.text() - 1);
-            }
+        //     if ($target[0] == $countPrev[0]) {
+        //         if (+$countValue.text() <= 1) {
+        //             $countValue.text(1)
+        //             return;
+        //         }
+        //         $countValue.text(+$countValue.text() - 1);
+        //     }
 
-            if ($target[0] == $countNext[0]) {
-                $countValue.text(+$countValue.text() + 1);
-            }
+        //     if ($target[0] == $countNext[0]) {
+        //         $countValue.text(+$countValue.text() + 1);
+        //     }
 
-        }
+        // }
 
-        // arrow top
-        if ($target.hasClass('arrow-top-btn')) {
-            $("html, body").animate({
-                scrollTop: 0
-            }, 300);
-            return false;
-        }
+        // // arrow top
+        // if ($target.hasClass('arrow-top-btn')) {
+        //     $("html, body").animate({
+        //         scrollTop: 0
+        //     }, 300);
+        //     return false;
+        // }
 
-        // delete card product 
-        if ($target.hasClass('cart__delete')) {
-            $target.closest('.cart__order').remove();
-            checkEmptyCart()
-        }
+        // // delete card product 
+        // if ($target.hasClass('cart__delete')) {
+        //     $target.closest('.cart__order').remove();
+        //     checkEmptyCart()
+        // }
 
-        if ($target.hasClass('cart-clear')) {
-            $('.cart__order').remove();
-            checkEmptyCart()
-        }
+        // if ($target.hasClass('cart-clear')) {
+        //     $('.cart__order').remove();
+        //     checkEmptyCart()
+        // }
 
-        if ($target.hasClass('cart-clear-selected')) {
-            $('.cart__order').each(function () {
+        // if ($target.hasClass('cart-clear-selected')) {
+        //     $('.cart__order').each(function () {
 
-                if ($(this).find('.checkbox__input')[0].checked) {
-                    $(this).remove();
-                }
-            })
+        //         if ($(this).find('.checkbox__input')[0].checked) {
+        //             $(this).remove();
+        //         }
+        //     })
 
-            checkEmptyCart()
-        }
+        //     checkEmptyCart()
+        // }
 
     });
 
-    $('.search__form-input').on('blur', function () {
-        $('.search__btn').removeClass('active');
-        $('.search__btn').next().removeClass('open');
-    });
+    // $('.search__form-input').on('blur', function () {
+    //     $('.search__btn').removeClass('active');
+    //     $('.search__btn').next().removeClass('open');
+    // });
 
 
     $(window).on("scroll", function (e) {
@@ -251,32 +252,8 @@ $(function () {
     })
 
 
-    function checkEmptyCart() {
-
-
-        let $cardCategories = $('.cart__orders-list');
-        $cardCategories.each(function () {
-            let $cardOrders = $(this).find('.cart__order');
-            if ($cardOrders.length == 0) {
-                $(this).prev().remove()
-            }
-        });
-
-
-        if ($('.cart__order').length == 0) {
-            $('.cart__orders').html('<div class="cart__orders-empty">Корзина пуста</div>')
-        }
-
-    }
-
-    function getСatalog() {
-        $('.catalog__btn').toggleClass('active');
-        $('.catalog__body').fadeToggle();
-    }
-
 
     // Input type="tel" Mask
-
 
     if ($('input[type="tel"]').length > 0) {
         $('input[type="tel"]').each(function (idx, input) {
@@ -342,14 +319,13 @@ $(function () {
     }
 
 
-
-
-
     // sliders 
 
     if ($('.promo__slider').length) {
         new Swiper('.promo__slider', {
             slidesPerView: 1,
+            autoplay: true,
+            loop: true,
             navigation: {
                 nextEl: ".promo__next",
                 prevEl: ".promo__prev"
@@ -371,7 +347,68 @@ $(function () {
         });
     }
 
+    if ($('.products__slider').length) {
 
+        $('.products__slider').each((index, slider) => {
+
+            const next = slider.querySelector('.products__next');
+            const prev = slider.querySelector('.products__prev');
+
+
+
+            new Swiper(slider, {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                watchSlidesProgress: true,
+                navigation: {
+                    nextEl: next,
+                    prevEl: prev
+                },
+            });
+        })
+    }
+
+    // quantity block
+
+    if ($('.quantity-block').length > 0) {
+
+        const minQuantity = 1;
+
+        $('.quantity-block').on('click', '.plus', function () {
+            const $block = $(this).closest('.quantity-block');
+            const $input = $block.find('.quantity-block__input');
+            let currentValue = parseInt($input.val(), 10);
+
+
+            $input.val(currentValue + 1);
+        });
+
+
+        $('.quantity-block').on('click', '.minus', function () {
+            const $block = $(this).closest('.quantity-block');
+            const $input = $block.find('.quantity-block__input');
+            let currentValue = parseInt($input.val(), 10);
+
+
+            if (currentValue > minQuantity) {
+                $input.val(currentValue - 1);
+            }
+        });
+
+
+        $('.quantity-block').on('input', '.quantity-block__input', function () {
+            const $input = $(this);
+            let value = parseInt($input.val(), 10);
+
+
+            if (isNaN(value) || value < minQuantity) {
+                value = minQuantity;
+            }
+
+            $input.val(value);
+        });
+
+    }
 
 
 

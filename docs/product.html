@@ -37,53 +37,330 @@
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/libs/input-tel.css?_v=20250125223949">
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20250125223949">
-	<link rel="stylesheet" href="css/libs/fancybox.min.css?_v=20250125223949">
+	<link rel="stylesheet" href="css/libs/input-tel.css?_v=20250127003936">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20250127003936">
+	<link rel="stylesheet" href="css/libs/fancybox.min.css?_v=20250127003936">
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20250125223949">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250125223949">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20250127003936">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250127003936">
 </head>
 
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="header__container">
-				<div class="header__top">
-					<a href="" class="header__logo">
-						<picture>
-							<source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo">
-						</picture>
-					</a>
-					<div class="header__info">
-						<address class="header__info-item">
-							<span class="header__info-icon icon-location" data-tooltip="Московская область, г.&nbsp;Химки, ул.&nbsp;Рабочая, 2Ак12"></span> Московская область, г. Химки, ул. Рабочая, 2Ак12
-						</address>
-						<div class="header__info-item color-grey">
-							<span class="header__info-icon icon-clock" data-tooltip="Работаем с&nbsp;9:00&nbsp;до&nbsp;20:00 - Ежедневно"></span> Работаем с 9:00 до 20:00 - Ежедневно
+			<div class="header__top">
+				<div class="header__container">
+					<div class="header__top-body">
+						<a href="" class="header__logo">
+							<picture>
+								<source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo">
+							</picture>
+						</a>
+						<div class="header__info">
+							<address class="header__info-item">
+								<span class="header__info-icon icon-location"></span> Россия, Самарская область, Тольятти, Офицерская улица, 41с1
+							</address>
+							<div class="header__info-item color-grey">
+								<span class="header__info-icon icon-clock"></span> Работаем с 9:00 до 20:00 - Ежедневно
+							</div>
 						</div>
-					</div>
-					<div class="header__socials">
-						<a href="" class="header__social">
-							<img src="img/icons/button_wa.svg" alt="Отправить в WhatsApp">
+						<div class="header__socials">
+							<a href="" class="header__social">
+								<img src="img/icons/button_wa.svg" alt="Отправить в WhatsApp">
+							</a>
+							<a href="" class="header__social">
+								<img src="img/icons/button_tg.svg" alt="Отправить в Telegram">
+							</a>
+						</div>
+						<div class="header__contacts">
+							<a href="#callback" data-fancybox class="header__contacts-link">Заказать звонок</a>
+							<a href="tel:+74950779777" class="header__contacts-item icon-phone"><span>+7 (495) 077-97-77</span></a>
+							<a href="mailto:severlesgroup@mail.ru" class="header__contacts-item icon-envelope"><span>severlesgroup@mail.ru</span></a>
+						</div>
+						<a href="" class="header__cart icon-cart"> 0 ₽ <span class="header__cart-quantity">0</span>
 						</a>
-						<a href="" class="header__social">
-							<img src="img/icons/button_tg.svg" alt="Отправить в Telegram">
-						</a>
 					</div>
-					<a href="" class="header__cart icon-cart"> 0 ₽ <span class="header__cart-quantity">0</span>
-					</a>
 				</div>
-				<div class="header__bottom">
-					<div class="header__menu menu">
-						<button type="button" class="menu__icon icon-menu">
-							<span></span>
-						</button>
-						<nav class="menu__body">
+			</div>
+			<div class="header__bottom">
+				<div class="header__container">
+					<div class="header__bottom-body">
+						<nav class="header__menu menu">
 							<ul class="menu__list">
-								<li class="menu__item"><a href="" class="menu__link"></a></li>
+								<li class="menu__item has-child">
+									<a href="" class="menu__link">Каталог</a>
+									<div class="submenu">
+										<ul class="submenu__list">
+											<li class="submenu__item has-child">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/01.webp" type="image/webp"><img alt="Брус обрезной" src="img/thumbs/01.webp" class="icon">
+														</picture>
+													</span> Брус обрезной <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+												</a>
+												<ul class="subsubmenu">
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из сосны</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из ели</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из лиственницы</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из хвои (ТУ)</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">сухой</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">естественной влажности</a></li>
+												</ul>
+											</li>
+											<li class="submenu__item has-child">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/02.webp" type="image/webp"><img alt="Брус строганный" src="img/thumbs/02.webp" class="icon">
+														</picture>
+													</span> Брус строганный <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+												</a>
+												<ul class="subsubmenu">
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из лиственницы</a></li>
+												</ul>
+											</li>
+											<li class="submenu__item has-child">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/03.webp" type="image/webp"><img alt="Доска обрезная" src="img/thumbs/03.webp" class="icon">
+														</picture>
+													</span> Доска обрезная <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+												</a>
+												<ul class="subsubmenu">
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из сосны</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из осины</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из хвои (ТУ)</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">сухая</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">естественной влажности</a></li>
+												</ul>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/04.webp" type="image/webp"><img alt="Доска строганная" src="img/thumbs/04.webp" class="icon">
+														</picture>
+													</span> Доска строганная </a>
+											</li>
+											<li class="submenu__item has-child">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/05.webp" type="image/webp"><img alt="Брусок" src="img/thumbs/05.webp" class="icon">
+														</picture>
+													</span> Брусок <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+												</a>
+												<ul class="subsubmenu">
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">сухой</a></li>
+												</ul>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<picture>
+														<source srcset="img/thumbs/06.webp" type="image/webp"><img alt="Блок-хаус" src="img/thumbs/06.webp" class="icon">
+													</picture> Блок-хаус
+												</a>
+											</li>
+											<li class="submenu__item has-child">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/07.webp" type="image/webp"><img alt="Имитация бруса" src="img/thumbs/07.webp" class="icon">
+														</picture>
+													</span> Имитация бруса <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+												</a>
+												<ul class="subsubmenu">
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из сосны</a></li>
+												</ul>
+											</li>
+											<li class="submenu__item has-child">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/08.webp" type="image/webp"><img alt="Вагонка" src="img/thumbs/08.webp" class="icon">
+														</picture>
+													</span> Вагонка <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+												</a>
+												<ul class="subsubmenu">
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из сосны</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из липы</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">из лиственницы</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">штиль</a></li>
+												</ul>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/09.webp" type="image/webp"><img alt="Евровагонка" src="img/thumbs/09.webp" class="icon">
+														</picture>
+													</span> Евровагонка </a>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/10.webp" type="image/webp"><img alt="Половая доска" src="img/thumbs/10.webp" class="icon">
+														</picture>
+													</span> Половая доска </a>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/11.webp" type="image/webp"><img alt="Клееный брус" src="img/thumbs/11.webp" class="icon">
+														</picture>
+													</span> Клееный брус </a>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/12.webp" type="image/webp"><img alt="Клееная доска" src="img/thumbs/12.webp" class="icon">
+														</picture>
+													</span> Клееная доска </a>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/13.webp" type="image/webp"><img alt="Профилированный брус" src="img/thumbs/13.webp" class="icon">
+														</picture>
+													</span> Профилированный брус </a>
+											</li>
+											<li class="submenu__item has-child">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/14.webp" type="image/webp"><img alt="Лиственница" src="img/thumbs/14.webp" class="icon">
+														</picture>
+													</span> Лиственница <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+												</a>
+												<ul class="subsubmenu">
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Брус</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Доска обрезная</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Брусок</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Имитация бруса</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Планкен</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Половая доска</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Палубная доска</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Террасная доска</a></li>
+												</ul>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/15.webp" type="image/webp"><img alt="Доска для забора" src="img/thumbs/15.webp" class="icon">
+														</picture>
+													</span> Доска для забора </a>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/16.webp" type="image/webp"><img alt="Материалы для бани" src="img/thumbs/16.webp" class="icon">
+														</picture>
+													</span> Материалы для бани </a>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/17.webp" type="image/webp"><img alt="Обрезной пиломатериал" src="img/thumbs/17.webp" class="icon">
+														</picture>
+													</span> Обрезной пиломатериал </a>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/18.webp" type="image/webp"><img alt="Пиломатериал камерной сушки" src="img/thumbs/18.webp" class="icon">
+														</picture>
+													</span> Пиломатериал камерной сушки </a>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/19.webp" type="image/webp"><img alt="Строганные пиломатериалы" src="img/thumbs/19.webp" class="icon">
+														</picture>
+													</span> Строганные пиломатериалы </a>
+											</li>
+											<li class="submenu__item has-child">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/20.webp" type="image/webp"><img alt="Антисептированный материал" src="img/thumbs/20.webp" class="icon">
+														</picture>
+													</span> Антисептированный материал <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+												</a>
+												<ul class="subsubmenu">
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Брус обрезной</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Брус строганный</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Доска обрезная</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">Доска строганная</a></li>
+												</ul>
+											</li>
+											<li class="submenu__item has-child">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/21.webp" type="image/webp"><img alt="Фанера" src="img/thumbs/21.webp" class="icon">
+														</picture>
+													</span> Фанера <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+												</a>
+												<ul class="subsubmenu">
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">ламинированная</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">шлифованная</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">березовая</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">хвойная</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">ФК</a></li>
+													<li class="subsubmenu__item"><a href="" class="subsubmenu__link">OSB</a></li>
+												</ul>
+											</li>
+											<li class="submenu__item">
+												<a href="" class="submenu__link">
+													<span class="submenu__thumb">
+														<picture>
+															<source srcset="img/thumbs/22.webp" type="image/webp"><img alt="Mебельные щиты из сосны" src="img/thumbs/22.webp" class="icon">
+														</picture>
+													</span> Mебельные щиты из сосны </a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
+								<li class="menu__item has-child">
+									<a href="" class="menu__link">О компании</a>
+									<div class="submenu">
+										<ul class="submenu__list">
+											<li class="submenu__item"><a href="" class="submenu__link">Фотогалерея</a></li>
+											<li class="submenu__item"><a href="" class="submenu__link">Гарантии</a></li>
+											<li class="submenu__item"><a href="" class="submenu__link">Производство</a></li>
+											<li class="submenu__item"><a href="" class="submenu__link">Пиломатериалы оптом</a></li>
+											<li class="submenu__item"><a href="" class="submenu__link">Статьи</a></li>
+											<li class="submenu__item"><a href="" class="submenu__link">Отзывы</a></li>
+										</ul>
+									</div>
+								</li>
+								<li class="menu__item"><a href="" class="menu__link">Цены</a></li>
+								<li class="menu__item"><a href="" class="menu__link">Акции</a></li>
+								<li class="menu__item"><a href="" class="menu__link">Калькулятор</a></li>
+								<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+								<li class="menu__item"><a href="" class="menu__link">Доставка и оплата</a></li>
 							</ul>
 						</nav>
+						<form action="#" class="header__search search">
+							<input type="text" name="search" class="search__input" placeholder="Поиск">
+							<button type="submit" class="search__btn icon-search"></button>
+						</form>
+						<div class="header__actions">
+							<button type="button" class="header__action icon-heart">В избранное</button>
+							<button type="button" class="header__action icon-compare">В сравнение</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -122,14 +399,14 @@
 							<div class="benefits__card-icon">
 								<img src="img/icons/benefits/02.svg" alt="Иконка">
 							</div>
-							<div class="benefits__card-title">Гибкая система скидок</div>
+							<div class="benefits__card-title">Выполняем доставку в срок</div>
 							<p class="benefits__card-desc">Наличие собственного автопарка позволяет выполнять доставку вовремя, независимо от объема и сложности заказа</p>
 						</li>
 						<li class="benefits__card">
 							<div class="benefits__card-icon">
 								<img src="img/icons/benefits/03.svg" alt="Иконка">
 							</div>
-							<div class="benefits__card-title">Низкие цены за счёт собственного производства</div>
+							<div class="benefits__card-title">Гибкая система скидок</div>
 							<p class="benefits__card-desc">Позволяем нашим клиентам экономить при покупке большого количества пиломатериалов</p>
 						</li>
 						<li class="benefits__card">
@@ -170,7 +447,49 @@
 			</section>
 		</main>
 		<footer class="footer">
-			<div class="footer__container">
+			<div class="footer__content">
+				<div class="footer__container">
+					<div class="footer__content-top">
+						<a href="/" class="footer__logo">
+							<picture>
+								<source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="logo">
+							</picture>
+						</a>
+						<nav class="footer__menu">
+							<ul class="footer__menu-list">
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Каталог</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Услуги</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">О компании</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Цены</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Акции</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Калькулятор</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Контакты</a></li>
+								<li class="footer__menu-item"><a href="" class="footer__menu-link">Доставка и оплата</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="footer__content-body">
+						<div class="footer__contacts">
+							<a href="tel:+74950779777" class="footer__contacts-link icon-phone"><span>+7 (495) 077-97-77</span></a>
+							<a href="mailto:severlesgroup@mail.ru" class="footer__contacts-link icon-envelope"><span>severlesgroup@mail.ru</span></a>
+						</div>
+						<div class="footer__content-rate">
+							<iframe src="https://yandex.ru/sprav/widget/rating-badge/43919519886?type=rating" width="150" height="50" frameborder="0"></iframe>
+						</div>
+						<div class="footer__info">
+							<address class="footer__info-item icon-location">Россия, Самарская область, Тольятти, Офицерская улица, 41с1</address>
+							<div class="footer__info-item icon-clock color-grey">Работаем с 8:00 до 20:00 <br> Без выходных и праздников</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="footer__container">
+					<div class="footer__bottom-body">
+						<div class="footer__copy">2025 Все права защищены</div>
+						<a href="" class="footer__privacy">Политика обработки персональных данных</a>
+					</div>
+				</div>
 			</div>
 		</footer>
 		<div id="sign-in" class="popup ">
@@ -190,13 +509,13 @@
         </div>
     </div>
 </div> --> <!-- plugins -->
-		<script src="js/libs/jquery-3.7.1.min.js?_v=20250125223949"></script>
-		<script src="js/libs/jquery.inputmask.min.js?_v=20250125223949"></script>
-		<script src="js/libs/intlTelInput.min.js?_v=20250125223949"></script>
-		<script src="js/libs/fancybox.umd.js?_v=20250125223949"></script>
-		<script src="js/libs/swiper-bundle.min.js?_v=20250125223949"></script>
+		<script src="js/libs/jquery-3.7.1.min.js?_v=20250127003936"></script>
+		<script src="js/libs/jquery.inputmask.min.js?_v=20250127003936"></script>
+		<script src="js/libs/intlTelInput.min.js?_v=20250127003936"></script>
+		<script src="js/libs/fancybox.umd.js?_v=20250127003936"></script>
+		<script src="js/libs/swiper-bundle.min.js?_v=20250127003936"></script>
 		<!-- plugins -->
-		<script src="js/app.min.js?_v=20250125223949"></script>
+		<script src="js/app.min.js?_v=20250127003936"></script>
 	</div>
 </body>
 

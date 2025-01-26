@@ -12,11 +12,11 @@
                         <div class="promo__body">
                             <div class="promo__side">
                                 <a href="" class="promo__card" style="background-image: url('@img/promo/01.webp');">
-                                    <span class="promo__card-label">Популярное</span>
+                                    <span class="promo__card-label label">Популярное</span>
                                     <span class="promo__card-title">Брус обрезной</span>
                                 </a>
                                 <a href="" class="promo__card" style="background-image: url('@img/promo/03.webp');">
-                                    <span class="promo__card-label">Популярное</span>
+                                    <span class="promo__card-label label">Популярное</span>
                                     <span class="promo__card-title">Доска обрезная</span>
                                 </a>
                             </div>
@@ -25,10 +25,9 @@
                                     <div class="promo__slide swiper-slide" style="background-image: url('@img/promo/banner-01.webp');">
                                         <h1 class="promo__slide-title">
                                             <span class="color-accent">СКИДКА</span>
-                                            НА ДОСТАВКУ
-                                            <span class="color-accent">10%</span>
+                                            НА <br> ДОСТАВКУ <span class="color-accent">10%</span>
                                         </h1>
-                                        <ul class="promo__slide-list ">
+                                        <ul class="promo__slide-list">
                                             <li>Погрузка пиломатериала – бесплатно</li>
                                             <li>Распил пиломатериала* - бесплатно.</li>
                                         </ul>
@@ -48,18 +47,18 @@
                                     </div>
                                 </div>
                                 <div class="promo__controls">
-                                    <button type="button" class="promo__prev swiper-button-prev"></button>
+                                    <button type="button" class="promo__prev"></button>
                                     <div class="promo__pagination swiper-pagination"></div>
-                                    <button type="button" class="promo__next swiper-button-next"></button>
+                                    <button type="button" class="promo__next"></button>
                                 </div>
                             </div>
                             <div class="promo__side">
                                 <a href="" class="promo__card" style="background-image: url('@img/promo/02.webp');">
-                                    <span class="promo__card-label">Популярное</span>
+                                    <span class="promo__card-label label">Популярное</span>
                                     <span class="promo__card-title">Блок-хаус</span>
                                 </a>
                                 <a href="" class="promo__card" style="background-image: url('@img/promo/04.webp');">
-                                    <span class="promo__card-label">Популярное</span>
+                                    <span class="promo__card-label label">Популярное</span>
                                     <span class="promo__card-title">Евровагонка</span>
                                 </a>
                             </div>
@@ -77,15 +76,53 @@
                     </div>
                 </section>
                 <section class="products">
-                    <div class="products__container">
+                    <div class="products__container tabs">
                         <div class="products__header">
                             <h2 class="products__title">Новинки и хиты продаж</h2>
-                            <div class="products__tabs">
-                                <div class="tabs" role="tablist">
-                                    <a class="tab-btn">Новинки</a>
-                                    <a class="tab-btn">Хиты</a>
-                                    <a class="tab-btn">Рекомендуем</a>
-                                    <a class="tab-btn">Акции</a>
+                            <div class="products__tabs tabs__btns">
+                                <button type="button" class="tabs__btn btn active">Новинки</button>
+                                <button type="button" class="tabs__btn btn">Хиты</button>
+                                <button type="button" class="tabs__btn btn">Рекомендуем</button>
+                                <button type="button" class="tabs__btn btn">Акции</button>
+                            </div>
+                        </div>
+                        <div class="products__content">
+                            <div class="tabs__contents">
+                                <div class="tabs__content active">
+                                    <div class="products__slider swiper">
+                                        <div class="swiper-wrapper">
+                                            @@loop('./html/templates/_product.html', './html/json/home-news.json')
+                                        </div>
+                                        <button type="button" class="products__prev swiper-button-prev"></button>
+                                        <button type="button" class="products__next swiper-button-next"></button>
+                                    </div>
+                                </div>
+                                <div class="tabs__content">
+                                    <div class="products__slider swiper">
+                                        <div class="swiper-wrapper">
+                                            @@loop('./html/templates/_product.html', './html/json/home-hits.json')
+                                        </div>
+                                        <button type="button" class="products__prev swiper-button-prev"></button>
+                                        <button type="button" class="products__next swiper-button-next"></button>
+                                    </div>
+                                </div>
+                                <div class="tabs__content">
+                                    <div class="products__slider swiper">
+                                        <div class="swiper-wrapper">
+                                            @@loop('./html/templates/_product.html', './html/json/home-recommendations.json')
+                                        </div>
+                                        <button type="button" class="products__prev swiper-button-prev"></button>
+                                        <button type="button" class="products__next swiper-button-next"></button>
+                                    </div>
+                                </div>
+                                <div class="tabs__content">
+                                    <div class="products__slider swiper">
+                                        <div class="swiper-wrapper">
+                                            @@loop('./html/templates/_product.html', './html/json/home-promos.json')
+                                        </div>
+                                        <button type="button" class="products__prev swiper-button-prev"></button>
+                                        <button type="button" class="products__next swiper-button-next"></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -100,9 +137,9 @@
                                 </h2>
                                 <div class="about__desc">
                                     <p>Компания «СеверЛесГруп» производит и реализует пиломатериалы оптом и в розницу. При изготовлении продукции используется экологически чистое высококачественное сырье. Обработка выполняется на новейшем оборудовании с полным соблюдением всех действующих норм и стандартов.</p>
-                                    <p>Контроль производства осуществляется на каждом этапе, поэтому продукцию отличает точная геометрия. Поверхности пиломатериалов соответствуют указанному сорту.</p>
-                                    <p>Свою деятельность мы начали в 2008 году и с тех пор смогли заслужить доверие многих заказчиков. В ассортименте представлена различная продукция – строганная и обрезная доска, брус, вагонка и множество других видов пиломатериала.</p>
-                                    <p>Обращаясь в компанию «СеверЛесГруп», клиенты застрахованы от любых неожиданностей и в одном месте получают весь спектр услуг. Выбирайте удобную схему расчетов, оформляйте заявку на доставку и получайте пиломатериал достойного качества в кратчайшие сроки!</p>
+                                    <p><strong>Контроль производства осуществляется на каждом этапе,</strong> поэтому продукцию отличает точная геометрия. Поверхности пиломатериалов <strong>соответствуют указанному сорту.</strong></p>
+                                    <p>Свою деятельность мы начали в 2008 году и с тех пор смогли заслужить доверие многих заказчиков. В ассортименте представлена различная продукция – <strong>строганная и обрезная доска, брус, вагонка и множество других видов пиломатериала.</strong></p>
+                                    <p>Обращаясь в компанию «СеверЛесГруп», клиенты застрахованы от любых неожиданностей и в одном месте получают весь спектр услуг. Выбирайте удобную схему расчетов, оформляйте заявку на доставку и <strong>получайте пиломатериал достойного качества в кратчайшие сроки!</strong></p>
                                 </div>
                             </div>
                             <div class="about__visual">
@@ -323,7 +360,7 @@
                             нашем каталоге погонажные изделия соответствуют необходимым стандартам и техническим
                             условиям, предъявляемым к данным материалам не только в России, но и за рубежом.
                         </p>
-                        <h2>Впечатляющий выбор пиломатериала</h2>
+                        <h3>Впечатляющий выбор пиломатериала</h3>
                         <div class="columns">
                             <p>
                                 В обширном ассортименте компании «СеверЛесГруп» представлен самый разнообразный
@@ -363,7 +400,6 @@
                                 всегда
                                 осуществляется в самые короткие сроки. У нас всегда есть в наличии нужные
                             </p>
-
                         </div>
                         <h2>«СеверЛесГруп»: качественные пиломатериалы в Москве и России</h2>
                         <p>Компания «СеверЛесГруп» продает пиломатериалы в Москве, а также в Московской области.

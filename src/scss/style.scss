@@ -61,11 +61,11 @@ $ui-index-6: 6; // Для элементов, перекрывающих все
 
 // ОБЩИЕ ПАРАМЕТРЫ
 
-@import "common";
 @import "ui";
 @import "forms";
-// @import "header";
-// @import "footer";
+@import "common";
+@import "header";
+@import "footer";
 
 //=======================================
 

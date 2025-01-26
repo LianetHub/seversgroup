@@ -1,27 +1,3 @@
-h1,
-.h1 {
-	font-size: 2.25rem;
-	font-weight: 600;
-	line-height: 100%;
-}
-
-h2,
-.h2 {
-	font-size: rem(24);
-	@media (min-width: $md4) {
-		letter-spacing: em(0.02, 2);
-		font-size: 2rem;
-	}
-	font-weight: 700;
-	line-height: 125%;
-}
-h3,
-.h3 {
-	font-size: 1.75rem;
-	font-weight: 700;
-	line-height: 125%;
-}
-
 .color-accent {
 	color: $accent;
 }
@@ -30,6 +6,54 @@ h3,
 }
 .color-grey {
 	color: $grey;
+}
+
+.label {
+	border: rem(1) solid $accent;
+	color: $white;
+	background: $accent;
+	border-radius: 1rem;
+	font-size: 0.75rem;
+	letter-spacing: em(0.25, 14);
+	line-height: math.div(24, 12);
+	padding: 0 rem(14);
+}
+
+.favorite-btn {
+	width: 1.5rem;
+	height: 1.5rem;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	&::before {
+		@extend %ic, .icon-heart;
+		transition: all 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			color: #fa7a93;
+		}
+	}
+	&.active {
+		&::before {
+			@extend %ic, .icon-heart-fill;
+			color: #fa7a93;
+			animation: pulse 0.3s ease-in-out;
+			@keyframes pulse {
+				0% {
+					transform: scale(1);
+				}
+				50% {
+					transform: scale(1.4);
+				}
+				100% {
+					transform: scale(1);
+				}
+			}
+		}
+	}
 }
 
 //============ МОДУЛИ ====================
@@ -68,43 +92,6 @@ h3,
 // 	line-height: 100%;
 // 	&::before {
 // 		color: $orange;
-// 	}
-// }
-
-// .favorite-btn {
-// 	width: 1.5rem;
-// 	height: 1.5rem;
-// 	font-size: 1.5rem;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	flex-shrink: 0;
-// 	&::before {
-// 		@extend %ic, .icon-heart;
-// 		transition: all 0.3s ease 0s;
-// 	}
-// 	@media (any-hover: hover) {
-// 		&:hover {
-// 			color: #fa7a93;
-// 		}
-// 	}
-// 	&.active {
-// 		&::before {
-// 			@extend %ic, .icon-heart-fill;
-// 			color: #fa7a93;
-// 			animation: pulse 0.3s ease-in-out;
-// 			@keyframes pulse {
-// 				0% {
-// 					transform: scale(1);
-// 				}
-// 				50% {
-// 					transform: scale(1.4);
-// 				}
-// 				100% {
-// 					transform: scale(1);
-// 				}
-// 			}
-// 		}
 // 	}
 // }
 
@@ -336,11 +323,8 @@ h3,
 
 // Стилизация скролла
 
-$scrollbarColor: #fa7a93;
-$scrollbarHover: darken(
-	$color: $scrollbarColor,
-	$amount: 10,
-);
+$scrollbarColor: $accent;
+$scrollbarHover: $secondary;
 
 ::-webkit-scrollbar {
 	width: rem(8);

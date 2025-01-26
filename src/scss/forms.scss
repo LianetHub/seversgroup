@@ -140,7 +140,7 @@
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: math.div(24, 16);
-	padding: em(18) em(23);
+	padding: em(18.5) em(30);
 	gap: 0.5rem;
 	border: rem(1) solid;
 	&::before {
@@ -149,6 +149,21 @@
 	}
 	&:focus-visible {
 		box-shadow: 0 0 rem(1) rem(1) $text;
+	}
+	&.btn-primary {
+		background: $accent;
+		border-color: $accent;
+		color: $white;
+		&:hover {
+			background: $white;
+			border-color: $white;
+			color: $accent;
+		}
+		&:active {
+			background: $white;
+			border-color: $accent;
+			color: $accent;
+		}
 	}
 	&.btn-secondary {
 		background: $text;
@@ -164,13 +179,13 @@
 			border-color: $text-08;
 		}
 	}
-	&.btn-primary {
-		background: $accent;
-		border-color: $accent;
-		color: $white;
+	&.btn-secondary-outline {
+		background: $white;
+		border-color: $text;
+		color: $text;
 		&:hover {
-			background: $white;
-			color: $text;
+			background: $text;
+			color: $white;
 		}
 		&:active {
 			background: $white;
@@ -178,9 +193,15 @@
 			border-color: $text-08;
 		}
 	}
-
+	&.btn-white {
+		background: $white;
+		color: $accent;
+	}
 	&.btn-sm {
-		padding: 0.5rem 3rem;
+		padding: 0.5rem 2.75rem;
+	}
+	&.btn-xs {
+		padding: em(0) em(57);
 	}
 	&.btn-fullwidth {
 		width: 100%;
@@ -233,4 +254,24 @@
 
 .iti__selected-flag {
 	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.select {
+	position: relative;
+	& select {
+		appearance: none;
+		background: transparent;
+		border: rem(1) solid $accent;
+		border-radius: rem(6);
+		color: $text;
+		font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+			"Segoe UI Symbol", "Noto Color Emoji";
+		display: block;
+		font-size: 1rem;
+		font-weight: 500;
+		height: 100%;
+		outline: none;
+		padding: 1em em(37) 1em em(23);
+		width: 100%;
+	}
 }
