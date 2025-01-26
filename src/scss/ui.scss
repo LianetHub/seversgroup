@@ -56,6 +56,37 @@
 	}
 }
 
+.arrow-top-btn {
+	border-radius: rem(17);
+	bottom: 30%;
+	box-shadow: 0 rem(1) 1rem rgba(0, 0, 0, 0.13);
+	background: $white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	gap: 1rem;
+	padding: rem(6) rem(17) rem(10);
+	font-weight: 500;
+	position: fixed;
+	right: 0;
+	@media (min-width: $md4) {
+		right: 2%;
+	}
+	transform: rotate(90deg);
+	z-index: 99;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	&::before {
+		margin-top: 0.35rem;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $text;
+			color: $white;
+		}
+	}
+}
+
 //============ МОДУЛИ ====================
 // @import "modules/popup";
 // @import "modules/slider";

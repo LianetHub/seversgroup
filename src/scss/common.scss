@@ -45,6 +45,11 @@ body {
 	flex-direction: column;
 }
 
+.page {
+	flex: 1 1 auto;
+	overflow: hidden;
+}
+
 // ================== ОБОЛОЧКА ===============================
 
 // ================== LAYOUT =================================
@@ -87,7 +92,7 @@ h1 {
 h2 {
 	font-size: rem(22);
 	line-height: 1;
-	@media (min-width: $md2) {
+	@media (min-width: $md5) {
 		font-size: rem(35);
 	}
 }
@@ -193,19 +198,23 @@ h6 {
 	// .card__image
 	&__image {
 		position: relative;
+		flex: 1 1 auto;
 		width: 100%;
 		height: 0;
-		padding-bottom: 48%;
+
 		&.image-sm {
 			padding-bottom: 33.333%;
 		}
-		flex: 1 1 auto;
 		& img {
 			position: absolute;
 			top: 0;
 			left: 0;
 			bottom: 0;
 			right: 0;
+		}
+		padding-bottom: 60%;
+		@media (min-width: $md5) {
+			padding-bottom: 48%;
 		}
 	}
 	// .card__labels
@@ -268,12 +277,15 @@ h6 {
 	}
 	// .card__title
 	&__title {
-		font-size: rem(18);
 		line-height: math.div(21, 18);
 		font-weight: 700;
 		transition: color 0.3s ease;
 		width: 100%;
 		text-align: center;
+		font-size: rem(15);
+		@media (min-width: $md2) {
+			font-size: rem(18);
+		}
 		&:last-child {
 			text-align: left;
 		}

@@ -144,6 +144,15 @@ $(function () {
                 .addClass('active')
         }
 
+        // arrow top
+        if ($target.hasClass('arrow-top-btn')) {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 300);
+            return false;
+        }
+
+
 
         // // catalog accordion on mobile
         // if ($target.hasClass('catalog__product-title')) {
@@ -205,13 +214,6 @@ $(function () {
 
         // }
 
-        // // arrow top
-        // if ($target.hasClass('arrow-top-btn')) {
-        //     $("html, body").animate({
-        //         scrollTop: 0
-        //     }, 300);
-        //     return false;
-        // }
 
         // // delete card product 
         // if ($target.hasClass('cart__delete')) {
