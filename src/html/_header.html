@@ -4,6 +4,9 @@
             <div class="header__top-body">
                 <a href="" class="header__logo">
                     <img src="@img/logo.png" alt="logo">
+                    <span class="header__logo-tagline">
+                        близко... <br> и по карману!
+                    </span>
                 </a>
                 <div class="header__info">
                     <address class="header__info-item">
@@ -14,6 +17,14 @@
                         <span class="header__info-icon icon-clock"></span>
                         Работаем с 9:00 до 20:00 - Ежедневно
                     </div>
+                </div>
+                <div class="header__btns">
+                    <a href="" class="header__btn icon-heart"></a>
+                    <a href="" class="header__btn icon-compare"></a>
+                    <a href="" class="header__btn icon-search"></a>
+                    <a href="" class="header__btn icon-phone"></a>
+                    <a href="" class="header__btn icon-whatsapp"></a>
+                    <a href="" class="header__btn icon-telegram"></a>
                 </div>
                 <div class="header__socials">
                     <a href="" class="header__social">
@@ -39,9 +50,11 @@
         <div class="header__container">
             <div class="header__bottom-body">
                 <nav class="header__menu menu">
+                    <button type="button" class="menu__close icon-close"></button>
                     <ul class="menu__list">
                         <li class="menu__item has-child">
                             <a href="" class="menu__link">Каталог</a>
+                            <button type="button" class="menu__arrow icon-triangle"></button>
                             <div class="submenu">
                                 <ul class="submenu__list">
                                     <li class="submenu__item has-child">
@@ -245,6 +258,7 @@
                         <li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
                         <li class="menu__item has-child">
                             <a href="" class="menu__link">О компании</a>
+                            <button type="button" class="menu__arrow icon-triangle"></button>
                             <div class="submenu">
                                 <ul class="submenu__list">
                                     <li class="submenu__item"><a href="" class="submenu__link">Фотогалерея</a></li>
@@ -275,3 +289,28 @@
         </div>
     </div>
 </header>
+<nav class="mobile-menu">
+    <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+            <a href="" class="mobile-menu__link icon-catalog">Каталог</a>
+        </li>
+        <li class="mobile-menu__item">
+            <a href="" class="mobile-menu__link icon-contacts">Контакты</a>
+        </li>
+        <li class="mobile-menu__item">
+            <button type="button" class="mobile-menu__btn">
+                <img src="@img/icons/menu-btn.svg" alt="иконка">
+            </button>
+        </li>
+        <li class="mobile-menu__item">
+            <a href="" class="mobile-menu__link icon-phone">
+                Позвонить
+            </a>
+        </li>
+        <li class="mobile-menu__item">
+            <a href="" class="mobile-menu__link icon-cart">
+                Корзина
+            </a>
+        </li>
+    </ul>
+</nav>

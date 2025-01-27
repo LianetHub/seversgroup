@@ -9,6 +9,8 @@
 	--primary-07: rgba(46, 60, 83, 0.7);
 	--primary-08: rgba(46, 60, 83, 0.8);
 	--primary-09: rgba(46, 60, 83, 0.9);
+	--brown: #d7ba9a;
+	--brown-dark: #51322b;
 	--accent: #7cbe69;
 	// --accent: #d7ba9a;
 	--accent-06: rgba(124, 190, 105, 0, 6);
@@ -134,8 +136,13 @@ h6 {
 	// .benefits__cards
 	&__cards {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
 		gap: 1.5rem;
+		@media (min-width: $md5) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (min-width: $md2) {
+			grid-template-columns: repeat(4, 1fr);
+		}
 	}
 	// .benefits__card
 	&__card {
@@ -203,7 +210,10 @@ h6 {
 		height: 0;
 
 		&.image-sm {
-			padding-bottom: 33.333%;
+			padding-bottom: 55%;
+			@media (min-width: $md3) {
+				padding-bottom: 33.333%;
+			}
 		}
 		& img {
 			position: absolute;
@@ -249,10 +259,19 @@ h6 {
 		background: #fff;
 		padding: 1rem;
 		position: relative;
-		min-height: rem(84);
+		min-height: rem(68);
+		@media (min-width: $md3) {
+			min-height: rem(84);
+		}
 		&:has(.card__price) {
-			padding: 1rem 3rem;
 			flex-direction: column;
+			padding: 0.5rem 3rem 0.5rem 0.5rem;
+			align-items: flex-start;
+
+			@media (min-width: $md3) {
+				align-items: center;
+				padding: 1rem 3rem;
+			}
 			.card__icon {
 				position: absolute;
 				top: 0.5rem;
@@ -262,9 +281,14 @@ h6 {
 	}
 	// .card__icon
 	&__icon {
-		width: rem(40);
-		height: rem(37);
-		font-size: rem(22);
+		width: rem(35);
+		height: rem(32);
+		font-size: rem(19);
+		@media (min-width: $md5) {
+			font-size: rem(22);
+			width: rem(40);
+			height: rem(37);
+		}
 		box-shadow: 0 rem(1.5) rem(10.6) rgba(0, 0, 0, 0.12);
 		border-radius: rem(9);
 		display: flex;
@@ -281,8 +305,13 @@ h6 {
 		font-weight: 700;
 		transition: color 0.3s ease;
 		width: 100%;
-		text-align: center;
-		font-size: rem(15);
+		font-size: rem(13);
+		@media (min-width: $md5) {
+			font-size: rem(15);
+		}
+		@media (min-width: $md3) {
+			text-align: center;
+		}
 		@media (min-width: $md2) {
 			font-size: rem(18);
 		}
@@ -300,8 +329,15 @@ h6 {
 	// .tabs__btns
 	&__btns {
 		display: flex;
+		flex-direction: column;
 		gap: 0.5rem;
-		flex-wrap: wrap;
+		@media (min-width: $md5) {
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+		@media (min-width: $md4) {
+			justify-content: flex-end;
+		}
 	}
 	// .tabs__btn
 	&__btn {
@@ -309,7 +345,9 @@ h6 {
 			background: $accent;
 			border-color: $accent;
 			color: $white;
-			padding: rem(10) rem(54);
+			@media (min-width: $md5) {
+				padding: rem(10) rem(54);
+			}
 		}
 		box-shadow: 0 rem(5) rem(20) rgba(0, 0, 0, 0.1);
 		background: $white;
@@ -374,6 +412,7 @@ h6 {
 		position: absolute;
 		top: 1rem;
 		left: 1rem;
+		z-index: 2;
 	}
 	// .product__labels
 	&__labels {
@@ -396,7 +435,10 @@ h6 {
 	}
 	// .product__body
 	&__body {
-		padding: rem(12) rem(21) rem(18);
+		padding: rem(12) rem(10) rem(18);
+		@media (min-width: $md5) {
+			padding: rem(12) rem(21) rem(18);
+		}
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -413,6 +455,7 @@ h6 {
 		letter-spacing: em(0.25, 20);
 		line-height: math.div(29, 20);
 		transition: color 0.3s ease;
+		margin-bottom: auto;
 		@media (any-hover: hover) {
 			&:hover {
 				color: $accent;
@@ -421,11 +464,15 @@ h6 {
 	}
 	// .product__props
 	&__props {
-		font-size: 1rem;
-		line-height: math.div(26, 16);
-		padding-left: 1em;
-		width: 100%;
-		margin-bottom: auto;
+		display: none;
+		@media (min-width: $md5) {
+			display: block;
+			font-size: 1rem;
+			line-height: math.div(26, 16);
+			padding-left: 1em;
+			width: 100%;
+			margin-bottom: auto;
+		}
 	}
 	// .product__props-item
 	&__props-item {
@@ -499,7 +546,10 @@ h6 {
 	overflow: hidden;
 	&.quantity-block-lg {
 		min-height: rem(56);
-		width: rem(200);
+		width: 100%;
+		@media (min-width: $md4) {
+			max-width: rem(200);
+		}
 		flex-shrink: 0;
 		.quantity-block__btn {
 			font-size: rem(24);

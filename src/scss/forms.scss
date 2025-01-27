@@ -1,6 +1,21 @@
 .form {
 	&__field {
 		width: 100%;
+		& label {
+			line-height: 1;
+			display: inline-block;
+			margin-bottom: 0.5rem;
+		}
+		&.checkbox {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+			cursor: pointer;
+			input,
+			label {
+				margin: 0;
+			}
+		}
 	}
 	// .form__control
 	&__control {
@@ -28,103 +43,126 @@
 			outline: 1px solid #ba2028;
 			background: #fff1ed;
 		}
+		&:is(textarea) {
+			height: rem(137);
+			resize: none;
+		}
 	}
-	// // .form__textarea
-	// &__textarea {
-	// 	height: rem(78);
-	// 	resize: none;
-	// 	text-overflow: ellipsis;
-	// 	transition: border-color 0.3s ease 0s, color 0.3s ease 0s;
-	// 	width: 100%;
-	// 	background: #fff;
-	// 	padding: 0 0 0.94rem 0;
-	// 	border: 0;
-	// 	border-bottom: rem(1) solid #d7d7d7;
-	// 	color: $text;
-	// 	font-size: 1rem;
-	// 	@media (min-width: $md2) {
-	// 		font-size: 1.125rem;
-	// 	}
-	// 	line-height: 150%;
-	// 	&::placeholder {
-	// 		opacity: 1;
-	// 		color: rgba(43, 50, 57, 0.3);
-	// 	}
-	// 	&:hover,
-	// 	&:focus {
-	// 		border-color: $text;
-	// 	}
-	// 	&:disabled {
-	// 		background: #ddd;
-	// 		border-color: #ddd;
-	// 	}
-	// 	&._error {
-	// 		outline: 1px solid #ba2028;
-	// 		background: #fff1ed;
-	// 	}
-	// }
 
-	// // .form__checkbox
-	// &__checkbox {
-	// 	margin-top: 1.25rem;
-	// 	display: block;
-	// }
-	// // .form__checkbox-input
-	// &__checkbox-input {
-	// 	&:checked {
-	// 		& + .form__checkbox-text {
-	// 			&::before {
-	// 				@extend %ic, .icon-check;
-	// 			}
-	// 		}
-	// 	}
-	// 	&.error {
-	// 		& + .form__checkbox-text {
-	// 			&::before {
-	// 				border: rem(1) solid red;
-	// 			}
-	// 		}
-	// 	}
-	// }
+	// .form__checkbox
+	&__checkbox {
+		display: inline-block;
 
-	// // .form__checkbox-text
-	// &__checkbox-text {
-	// 	position: relative;
-	// 	display: block;
-	// 	width: fit-content;
-	// 	color: rgba(43, 50, 57, 0.3);
-	// 	font-size: 0.75rem;
-	// 	line-height: 150%;
-	// 	padding: 0 0 0 1.25rem;
-	// 	cursor: pointer;
-	// 	user-select: none;
-	// 	&::before {
-	// 		content: "";
-	// 		position: absolute;
-	// 		top: 50%;
-	// 		transform: translateY(-50%);
-	// 		left: 0;
-	// 		display: flex;
-	// 		justify-content: center;
-	// 		align-items: center;
-	// 		border: rem(1) solid #2b3239;
-	// 		color: #2b3239;
-	// 		width: rem(15);
-	// 		height: rem(15);
-	// 		border-radius: rem(3);
-	// 		display: flex;
-	// 		justify-content: center;
-	// 		align-items: center;
-	// 	}
-	// 	& a {
-	// 		text-decoration: underline;
-	// 		@media (any-hover: hover) {
-	// 			&:hover {
-	// 				text-decoration: none;
-	// 			}
-	// 		}
-	// 	}
-	// }
+		width: fit-content;
+	}
+	// .form__checkbox-input
+	&__checkbox-input {
+		&:checked {
+			& + .form__checkbox-text {
+				&::before {
+					@extend %ic, .icon-check;
+				}
+			}
+		}
+		&.error {
+			& + .form__checkbox-text {
+				&::before {
+					border: rem(1) solid red;
+				}
+			}
+		}
+	}
+
+	// .form__checkbox-text
+	&__checkbox-text {
+		position: relative;
+		display: block;
+		width: fit-content;
+		font-size: 1rem;
+		line-height: 150%;
+		padding: 0 0 0 2.5em;
+		cursor: pointer;
+		user-select: none;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: rem(1) solid $text;
+			width: rem(24);
+			height: rem(24);
+			border-radius: rem(3);
+			color: $accent;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	&__footer {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	// .form__socials
+	&__socials {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+	}
+	// .form__social
+	&__social {
+		width: rem(48);
+		height: rem(48);
+		font-size: 1.25rem;
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		transition: background-color 0.3s ease;
+		&.icon-whatsapp {
+			background: #0dc143;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: darken($color: #0dc143, $amount: 10);
+				}
+			}
+		}
+		&.icon-telegram {
+			background: #419fd9;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: darken($color: #419fd9, $amount: 10);
+				}
+			}
+		}
+	}
+
+	// .form__btn
+	&__btn {
+		&.btn {
+			padding: 1rem 3rem;
+			&::before {
+				order: -1;
+				font-size: 1rem;
+			}
+		}
+	}
+	// .form__privacy
+	&__privacy {
+		color: #1b2b45;
+		font-size: rem(14);
+		font-weight: 300;
+		line-height: 1;
+		margin-top: em(18, 14);
+		opacity: 0.3;
+		text-align: center;
+	}
 }
 
 .btn {

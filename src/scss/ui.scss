@@ -20,26 +20,28 @@
 }
 
 .favorite-btn {
-	width: 1.5rem;
-	height: 1.5rem;
-	font-size: 1.5rem;
+	width: rem(30);
+	height: rem(30);
+	font-size: 1.25rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-shrink: 0;
+	background: #fff;
+	border-radius: 50%;
 	&::before {
 		@extend %ic, .icon-heart;
 		transition: all 0.3s ease 0s;
 	}
 	@media (any-hover: hover) {
 		&:hover {
-			color: #fa7a93;
+			color: $accent;
 		}
 	}
 	&.active {
 		&::before {
 			@extend %ic, .icon-heart-fill;
-			color: #fa7a93;
+			color: $accent;
 			animation: pulse 0.3s ease-in-out;
 			@keyframes pulse {
 				0% {
@@ -88,7 +90,7 @@
 }
 
 //============ МОДУЛИ ====================
-// @import "modules/popup";
+@import "modules/popup";
 // @import "modules/slider";
 // @import "modules/breadcrumbs";
 // @import "modules/select";
