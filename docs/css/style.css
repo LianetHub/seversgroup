@@ -1,24 +1,16 @@
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -35,6 +27,14 @@
   font-display: swap;
   src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2");
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -2504,12 +2504,10 @@ h6 {
   padding: 3.125rem 0.625rem 1.5625rem;
 }
 
-.no-webp .purchase__body::before {
-  background: url("../img/decor/shavings-1.png") 50% no-repeat; }
-
 .purchase__body::before {
   content: "";
   position: absolute;
+  background: url("../img/decor/shavings-1.png") 50% no-repeat;
   height: 6.375rem;
   left: -2.375rem;
   width: 7.9375rem;
@@ -2517,12 +2515,10 @@ h6 {
   top: -4.5rem;
 }
 
-.no-webp .purchase__body::after {
-  background: url("../img/decor/shavings-2.png") 50% no-repeat; }
-
 .purchase__body::after {
   content: "";
   position: absolute;
+  background: url("../img/decor/shavings-2.png") 50% no-repeat;
   height: 11.8125rem;
   right: -5.25rem;
   top: calc(100% - 4rem);
@@ -2946,11 +2942,9 @@ h6 {
           box-shadow: 0 0.25rem 0.5625rem rgba(0, 0, 0, 0.09);
 }
 
-.no-webp .calc {
-  background: url("../img/calc-bg.png") 0 center/50% auto no-repeat; }
-
 .calc {
   padding: 2.8125rem 0;
+  background: url("../img/calc-bg.png") 0 center/50% auto no-repeat;
 }
 
 .calc__image {
@@ -4677,9 +4671,3 @@ h6 {
             transform: rotate(180deg);
   }
 }
-
-.webp .purchase__body::before { background: url(../img/decor/shavings-1.webp) 50% no-repeat; }
-
-.webp .purchase__body::after { background: url(../img/decor/shavings-2.webp) 50% no-repeat; }
-
-.webp .calc { background: url(../img/calc-bg.webp) 0 center/50% auto no-repeat; }
