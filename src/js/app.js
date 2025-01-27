@@ -118,6 +118,23 @@ $(function () {
             $('body').removeClass('lock-menu');
         }
 
+
+        // show more items in catalog
+        if ($target.is('.catalog-card__more')) {
+            $target.toggleClass('active');
+            $target.prev().toggleClass('full');
+            if ($target.hasClass('active')) {
+                $target.text("Свернуть")
+            } else {
+                $target.text("Показать еще")
+            }
+        }
+
+        // show full catalog in product page
+        if ($target.is('.product-card__sidebar-catalog')) {
+            $target.next().slideToggle()
+        }
+
     });
 
 
@@ -252,6 +269,42 @@ $(function () {
                 }
             });
         })
+    }
+
+    if ($('.product-card__slider').length) {
+
+        const mainSlider = new Swiper('.product-card__slider-main', {
+            loop: true,
+
+            navigation: {
+                nextEl: '.product-card__next',
+                prevEl: '.product-card__prev',
+            },
+            thumbs: {
+                swiper: {
+                    el: '.product-card__slider-thumbs',
+                    slidesPerView: "auto",
+                    spaceBetween: 5,
+                    watchSlidesVisibility: true,
+                    watchSlidesProgress: true,
+                },
+            },
+        });
+
+        new Swiper('.product-card__slider-thumbs', {
+            loop: true,
+            slidesPerView: "auto",
+            spaceBetween: 5,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+
+        const thumbSlides = document.querySelectorAll('.product-card__slider-thumb');
+        thumbSlides.forEach((thumb, index) => {
+            thumb.addEventListener('mouseenter', () => {
+                mainSlider.slideTo(index);
+            });
+        });
     }
 
     // quantity block

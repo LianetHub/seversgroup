@@ -30,6 +30,7 @@ body {
 	line-height: normal;
 	color: $text;
 	background-color: $white;
+	margin-right: 0 !important;
 	&:has(.menu.active) {
 		@media (max-width: $md3) {
 			overflow: hidden;
@@ -467,12 +468,12 @@ h6 {
 		display: none;
 		@media (min-width: $md5) {
 			display: block;
-			font-size: 1rem;
-			line-height: math.div(26, 16);
-			padding-left: 1em;
-			width: 100%;
-			margin-bottom: auto;
 		}
+		font-size: 1rem;
+		line-height: math.div(26, 16);
+		padding-left: 1em;
+		width: 100%;
+		margin-bottom: auto;
 	}
 	// .product__props-item
 	&__props-item {
@@ -502,6 +503,15 @@ h6 {
 		&::before {
 			color: $accent;
 			font-size: 1.125rem;
+			height: 1.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+		}
+		&.icon-close {
+			&::before {
+				color: $red;
+			}
 		}
 	}
 	// .product__price

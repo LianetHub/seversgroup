@@ -37,12 +37,12 @@
 	<meta property="twitter:image:src" content="/OG.png">
 	<!-- Twitter -->
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/libs/input-tel.css?_v=20250127122633">
-	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20250127122633">
-	<link rel="stylesheet" href="css/libs/fancybox.min.css?_v=20250127122633">
+	<link rel="stylesheet" href="css/libs/input-tel.css?_v=20250127140153">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20250127140153">
+	<link rel="stylesheet" href="css/libs/fancybox.min.css?_v=20250127140153">
 	<!-- plugins -->
-	<link rel="stylesheet" href="css/reset.min.css?_v=20250127122633">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250127122633">
+	<link rel="stylesheet" href="css/reset.min.css?_v=20250127140153">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250127140153">
 </head>
 
 <body>
@@ -399,147 +399,324 @@
 			</ul>
 		</nav>
 		<main class="page">
-			<nav class="navigation">
-				<div class="navigation__container">
-					<ul class="navigation__list">
-						<li class="navigation__list-item">
-							<a href="/" class="navigation__list-link">Главная</a>
+			<nav class="breads" aria-label="Хлебные крошки">
+				<div class="breads__container">
+					<ul class="breads__list">
+						<li class="breads__item">
+							<a href="/" class="breads__link">Главная</a>
 						</li>
-						<li class="navigation__list-item">
-							<a href="" class="navigation__list-link">Клиентам</a>
-						</li>
-						<li class="navigation__list-item">
-							<a class="navigation__list-link active">Личный кабинет</a>
+						<li class="breads__item">
+							<a class="breads__link active">Каталог</a>
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<section class="catalog">
+			<section class="catalog catalog-page">
 				<div class="catalog__container">
-					<h2 class="catalog__title">В нашем каталоге более 10 000 пиломатериалов доступны для заказа</h2>
+					<h1 class="catalog__title">Каталог пиломатериалов</h1>
 					<ul class="catalog__list">
-						<li class="catalog__item">
-							<a href="" class="card">
-								<span class="card__image image-sm">
-									<picture>
-										<source srcset="img/catalog/01.webp" type="image/webp"><img src="img/catalog/01.webp" class="cover-image" alt="Фото товара">
-									</picture>
-									<span class="card__labels"> <span class="card__label">32 товара</span></span>
-								</span>
-								<span class="card__desc">
-									<span class="card__icon icon-arrow-right"></span>
-									<span class="card__title">Брус строганный сухой</span>
-									<span class="card__price">От <strong>80</strong> ₽/шт</span>
-								</span>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/01.webp" type="image/webp"><img src="img/catalog/01.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">89 товаров</span>
 							</a>
+							<a href="" class="catalog-card__name">Брус обрезной</a>
+							<ul class="catalog-card__list">
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 1 сорт ГОСТ </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 1 сорт </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус обрезной из сосны </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 100x100x6000 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 100х150х6000 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус обрезной из ели </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус обрезной из лиственницы </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус обрезной ТУ </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус обрезной сухой </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 150x150х6000 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус обрезной естественной влажности </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 100x200х6000 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 150x200х6000 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 200x200х6000 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 25x50 мм </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брусок 50x50х3000 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 50х70 </a>
+								</li>
+							</ul>
+							<button type="button" class="catalog-card__more icon-chevron-right">Показать еще</button>
 						</li>
-						<li class="catalog__item">
-							<a href="" class="card">
-								<span class="card__image image-sm">
-									<picture>
-										<source srcset="img/catalog/02.webp" type="image/webp"><img src="img/catalog/02.webp" class="cover-image" alt="Фото товара">
-									</picture>
-									<span class="card__labels"> <span class="card__label">60 товаров</span></span>
-								</span>
-								<span class="card__desc">
-									<span class="card__icon icon-arrow-right"></span>
-									<span class="card__title">Доска обрезная</span>
-									<span class="card__price">От <strong>9000</strong> ₽/м³</span>
-								</span>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/02.webp" type="image/webp"><img src="img/catalog/02.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">32 товара</span>
 							</a>
+							<a href="" class="catalog-card__name">Брус строганный сухой</a>
+							<ul class="catalog-card__list">
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус строганный из лиственницы </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 100х100 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 100х150 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 100x200 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 150х150 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брусок 50х50 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Брус 200х200х6000 </a>
+								</li>
+							</ul>
+							<button type="button" class="catalog-card__more icon-chevron-right">Показать еще</button>
 						</li>
-						<li class="catalog__item">
-							<a href="" class="card">
-								<span class="card__image image-sm">
-									<picture>
-										<source srcset="img/catalog/03.webp" type="image/webp"><img src="img/catalog/03.webp" class="cover-image" alt="Фото товара">
-									</picture>
-									<span class="card__labels"> <span class="card__label">47 товаров</span></span>
-								</span>
-								<span class="card__desc">
-									<span class="card__icon icon-arrow-right"></span>
-									<span class="card__title">Доска строганная</span>
-									<span class="card__price">От <strong>370</strong> ₽/шт</span>
-								</span>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/03.webp" type="image/webp"><img src="img/catalog/03.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">60 товаров</span>
 							</a>
+							<a href="" class="catalog-card__name">Доска обрезная</a>
+							<ul class="catalog-card__list">
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная из сосны </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная из осины </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная 2 сорт </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная из хвои (ТУ) </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная 1 сорт </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Обрезная доска оптом от производителя </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная сухая </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная 40х150х6000 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная 25x150x6000 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная 50х150х6000 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная 50x200x6000 </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная гост </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Доска обрезная естественной влажности </a>
+								</li>
+							</ul>
+							<button type="button" class="catalog-card__more icon-chevron-right">Показать еще</button>
 						</li>
-						<li class="catalog__item">
-							<a href="" class="card">
-								<span class="card__image image-sm">
-									<picture>
-										<source srcset="img/catalog/04.webp" type="image/webp"><img src="img/catalog/04.webp" class="cover-image" alt="Фото товара">
-									</picture>
-									<span class="card__labels"> <span class="card__label">65 товаров</span></span>
-								</span>
-								<span class="card__desc">
-									<span class="card__icon icon-arrow-right"></span>
-									<span class="card__title">Имитация бруса</span>
-									<span class="card__price">От <strong>400</strong> ₽/м²</span>
-								</span>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/04.webp" type="image/webp"><img src="img/catalog/04.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">47 товаров</span>
 							</a>
+							<a href="" class="catalog-card__name">Доска строганная</a>
 						</li>
-						<li class="catalog__item">
-							<a href="" class="card">
-								<span class="card__image image-sm">
-									<picture>
-										<source srcset="img/catalog/05.webp" type="image/webp"><img src="img/catalog/05.webp" class="cover-image" alt="Фото товара">
-									</picture>
-									<span class="card__labels"> <span class="card__label">102 товара</span></span>
-								</span>
-								<span class="card__desc">
-									<span class="card__icon icon-arrow-right"></span>
-									<span class="card__title">Вагонка</span>
-									<span class="card__price">От <strong>150</strong> ₽/шт</span>
-								</span>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/05.webp" type="image/webp"><img src="img/catalog/05.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">7 товаров</span>
 							</a>
+							<a href="" class="catalog-card__name">Брусок</a>
+							<ul class="catalog-card__list">
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Бруски сухие строганные </a>
+								</li>
+							</ul>
 						</li>
-						<li class="catalog__item">
-							<a href="" class="card">
-								<span class="card__image image-sm">
-									<picture>
-										<source srcset="img/catalog/06.webp" type="image/webp"><img src="img/catalog/06.webp" class="cover-image" alt="Фото товара">
-									</picture>
-									<span class="card__labels"> <span class="card__label">48 товаров</span></span>
-								</span>
-								<span class="card__desc">
-									<span class="card__icon icon-arrow-right"></span>
-									<span class="card__title">Половая доска</span>
-									<span class="card__price">От <strong>700</strong> ₽/м²</span>
-								</span>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/06.webp" type="image/webp"><img src="img/catalog/06.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">22 товара</span>
 							</a>
+							<a href="" class="catalog-card__name">Блок-хаус</a>
 						</li>
-						<li class="catalog__item">
-							<a href="" class="card">
-								<span class="card__image image-sm">
-									<picture>
-										<source srcset="img/catalog/07.webp" type="image/webp"><img src="img/catalog/07.webp" class="cover-image" alt="Фото товара">
-									</picture>
-									<span class="card__labels"> <span class="card__label">33 товара</span></span>
-								</span>
-								<span class="card__desc">
-									<span class="card__icon icon-arrow-right"></span>
-									<span class="card__title">Клееный брус</span>
-									<span class="card__price">От <strong>52000</strong> ₽/м³</span>
-								</span>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/07.webp" type="image/webp"><img src="img/catalog/07.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">65 товаров</span>
 							</a>
+							<a href="" class="catalog-card__name">Имитация бруса</a>
+							<ul class="catalog-card__list">
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Имитация бруса из сосны </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Имитация бруса 4 метра </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Имитация бруса сорта А,В </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Имитация бруса 20 мм </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Имитация бруса 6 метров </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Имитация бруса сорта АВ </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Вагонка имитация бруса </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Блок-хаус имитация бруса </a>
+								</li>
+							</ul>
+							<button type="button" class="catalog-card__more icon-chevron-right">Показать еще</button>
 						</li>
-						<li class="catalog__item">
-							<a href="" class="card">
-								<span class="card__image image-sm">
-									<picture>
-										<source srcset="img/catalog/08.webp" type="image/webp"><img src="img/catalog/08.webp" class="cover-image" alt="Фото товара">
-									</picture>
-									<span class="card__labels"> <span class="card__label">53 товара</span></span>
-								</span>
-								<span class="card__desc">
-									<span class="card__icon icon-arrow-right"></span>
-									<span class="card__title">Фанера</span>
-									<span class="card__price">От <strong>450</strong> ₽/Лист</span>
-								</span>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/08.webp" type="image/webp"><img src="img/catalog/08.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">102 товара</span>
 							</a>
+							<a href="" class="catalog-card__name">Вагонка</a>
+							<ul class="catalog-card__list">
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Вагонка из сосны </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Вагонка из липы </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Вагонка штиль из лиственницы </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Вагонка штиль </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Вагонка 3 метра </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Вагонка 6 метров </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Вагонка штиль из сосны </a>
+								</li>
+							</ul>
+							<button type="button" class="catalog-card__more icon-chevron-right">Показать еще</button>
+						</li>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/01.webp" type="image/webp"><img src="img/catalog/01.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">23 товара</span>
+							</a>
+							<a href="" class="catalog-card__name">Евровагонка</a>
+						</li>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/02.webp" type="image/webp"><img src="img/catalog/02.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">48 товаров</span>
+							</a>
+							<a href="" class="catalog-card__name">Половая доска</a>
+							<ul class="catalog-card__list">
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Шпунтованная доска для пола </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Половая доска 35 мм </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Половая доска 40 мм </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Половая доска 6 метров </a>
+								</li>
+								<li class="catalog-card__item">
+									<a href="" class="catalog-card__link"> Половая доска 45 мм </a>
+								</li>
+							</ul>
+						</li>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/03.webp" type="image/webp"><img src="img/catalog/03.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">6 товаров</span>
+							</a>
+							<a href="" class="catalog-card__name">Доска для забора</a>
+						</li>
+						<li class="catalog-card">
+							<a href="" class="catalog-card__image">
+								<picture>
+									<source srcset="img/catalog/04.webp" type="image/webp"><img src="img/catalog/04.webp" class="cover-image" alt="Фото категории">
+								</picture>
+								<span class="catalog-card__label label">10 товаров</span>
+							</a>
+							<a href="" class="catalog-card__name">Материалы для бани</a>
 						</li>
 					</ul>
-					<a href="" class="catalog__btn btn btn-primary icon-chevron-right">Перейти в каталог</a>
 				</div>
 			</section>
 			<section class="purchase">
@@ -1073,13 +1250,13 @@
 			</form>
 			<div class="form__privacy">Нажимая на кнопку, вы даете согласие на обработку персональных данных</div>
 		</div> <!-- plugins -->
-		<script src="js/libs/jquery-3.7.1.min.js?_v=20250127122633"></script>
-		<script src="js/libs/jquery.inputmask.min.js?_v=20250127122633"></script>
-		<script src="js/libs/intlTelInput.min.js?_v=20250127122633"></script>
-		<script src="js/libs/fancybox.umd.js?_v=20250127122633"></script>
-		<script src="js/libs/swiper-bundle.min.js?_v=20250127122633"></script>
+		<script src="js/libs/jquery-3.7.1.min.js?_v=20250127140153"></script>
+		<script src="js/libs/jquery.inputmask.min.js?_v=20250127140153"></script>
+		<script src="js/libs/intlTelInput.min.js?_v=20250127140153"></script>
+		<script src="js/libs/fancybox.umd.js?_v=20250127140153"></script>
+		<script src="js/libs/swiper-bundle.min.js?_v=20250127140153"></script>
 		<!-- plugins -->
-		<script src="js/app.min.js?_v=20250127122633"></script>
+		<script src="js/app.min.js?_v=20250127140153"></script>
 	</div>
 </body>
 

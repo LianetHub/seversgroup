@@ -4,37 +4,456 @@
     'title': 'Северлесгрупп | Cтраница каталога'
     })
     <body>
-        <div class="wrapper">
+        <product class="wrapper">
             @@include('html/_header.html', {})
             <main class="page">
-                <nav class="navigation">
-                    <div class="navigation__container">
-                        <ul class="navigation__list">
-                            <li class="navigation__list-item">
-                                <a href="/" class="navigation__list-link">Главная</a>
+                <nav class="breads" aria-label="Хлебные крошки">
+                    <div class="breads__container">
+                        <ul class="breads__list">
+                            <li class="breads__item">
+                                <a href="/" class="breads__link">Главная</a>
                             </li>
-                            <li class="navigation__list-item">
-                                <a href="" class="navigation__list-link">Клиентам</a>
+                            <li class="breads__item">
+                                <a href="/catalog" class="breads__link">Каталог</a>
                             </li>
-                            <li class="navigation__list-item">
-                                <a class="navigation__list-link active">Личный кабинет</a>
+                            <li class="breads__item">
+                                <a href="/" class="breads__link">Половая доска</a>
+                            </li>
+                            <li class="breads__item">
+                                <a class="breads__link active">Половая доска 35х160х6000 сорт "А"</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
-                <div class="product">
-                    <div class="__container">
-
+                <section class="product-card">
+                    <div class="product-card__container">
+                        <div class="product-card__content">
+                            <aside class="product-card__sidebar">
+                                <button type="button" class="product-card__sidebar-catalog btn btn-sm btn-secondary-outline">Каталог</button>
+                                <div class="product-card__sidebar-body">
+                                    <ul class="product-card__list">
+                                        <li class="submenu__item has-child">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Брус обрезной" src="@img/thumbs/01.webp" class="icon"></span>
+                                                Брус обрезной
+                                                <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+                                            </a>
+                                            <ul class="subsubmenu">
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из сосны</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из ели</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из лиственницы</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из хвои (ТУ)</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">сухой</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">естественной влажности</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item has-child">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Брус строганный" src="@img/thumbs/02.webp" class="icon"></span>
+                                                Брус строганный
+                                                <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+                                            </a>
+                                            <ul class="subsubmenu">
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из лиственницы</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item has-child">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Доска обрезная" src="@img/thumbs/03.webp" class="icon"></span>
+                                                Доска обрезная
+                                                <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+                                            </a>
+                                            <ul class="subsubmenu">
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из сосны</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из осины</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из хвои (ТУ)</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">сухая</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">естественной влажности</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Доска строганная" src="@img/thumbs/04.webp" class="icon"></span>
+                                                Доска строганная
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item has-child">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Брусок" src="@img/thumbs/05.webp" class="icon"></span>
+                                                Брусок
+                                                <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+                                            </a>
+                                            <ul class="subsubmenu">
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">сухой</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <img alt="Блок-хаус" src="@img/thumbs/06.webp" class="icon">
+                                                Блок-хаус
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item has-child">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Имитация бруса" src="@img/thumbs/07.webp" class="icon"></span>
+                                                Имитация бруса
+                                                <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+                                            </a>
+                                            <ul class="subsubmenu">
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из сосны</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item has-child">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Вагонка" src="@img/thumbs/08.webp" class="icon"></span>
+                                                Вагонка
+                                                <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+                                            </a>
+                                            <ul class="subsubmenu">
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из сосны</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из липы</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">из лиственницы</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">штиль</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Евровагонка" src="@img/thumbs/09.webp" class="icon"></span>
+                                                Евровагонка
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Половая доска" src="@img/thumbs/10.webp" class="icon"></span>
+                                                Половая доска
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Клееный брус" src="@img/thumbs/11.webp" class="icon"></span>
+                                                Клееный брус
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Клееная доска" src="@img/thumbs/12.webp" class="icon"></span>
+                                                Клееная доска
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Профилированный брус" src="@img/thumbs/13.webp" class="icon"></span>
+                                                Профилированный брус
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item has-child">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Лиственница" src="@img/thumbs/14.webp" class="icon"></span>
+                                                Лиственница
+                                                <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+                                            </a>
+                                            <ul class="subsubmenu">
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Брус</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Доска обрезная</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Брусок</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Имитация бруса</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Планкен</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Половая доска</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Палубная доска</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Террасная доска</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Доска для забора" src="@img/thumbs/15.webp" class="icon"></span>
+                                                Доска для забора
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Материалы для бани" src="@img/thumbs/16.webp" class="icon"></span>
+                                                Материалы для бани
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Обрезной пиломатериал" src="@img/thumbs/17.webp" class="icon"></span>
+                                                Обрезной пиломатериал
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Пиломатериал камерной сушки" src="@img/thumbs/18.webp" class="icon"></span>
+                                                Пиломатериал камерной сушки
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Строганные пиломатериалы" src="@img/thumbs/19.webp" class="icon"></span>
+                                                Строганные пиломатериалы
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item has-child">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Антисептированный материал" src="@img/thumbs/20.webp" class="icon"></span>
+                                                Антисептированный материал
+                                                <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+                                            </a>
+                                            <ul class="subsubmenu">
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Брус обрезной</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Брус строганный</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Доска обрезная</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">Доска строганная</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item has-child">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Фанера" src="@img/thumbs/21.webp" class="icon"></span>
+                                                Фанера
+                                                <span aria-label="Открыть подменю" class="submenu__arrow icon-triangle"></span>
+                                            </a>
+                                            <ul class="subsubmenu">
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">ламинированная</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">шлифованная</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">березовая</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">хвойная</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">ФК</a></li>
+                                                <li class="subsubmenu__item"><a href="" class="subsubmenu__link">OSB</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="" class="submenu__link">
+                                                <span class="submenu__thumb"><img alt="Mебельные щиты из сосны" src="@img/thumbs/22.webp" class="icon"></span>
+                                                Mебельные щиты из сосны
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </aside>
+                            <div class="product-card__body">
+                                <div class="product-card__header">
+                                    <div class="product-card__slider">
+                                        <div class="product-card__slider-main swiper">
+                                            <div class="swiper-wrapper">
+                                                <a href="@img/product/01.webp" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                                                    <img src="@img/product/01.webp" class="cover-image" alt="Фото товара">
+                                                </a>
+                                                <a href="@img/product/02.webp" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                                                    <img src="@img/product/02.webp" class="cover-image" alt="Фото товара">
+                                                </a>
+                                                <a href="@img/product/03.webp" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                                                    <img src="@img/product/03.webp" class="cover-image" alt="Фото товара">
+                                                </a>
+                                                <a href="@img/product/04.webp" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                                                    <img src="@img/product/04.webp" class="cover-image" alt="Фото товара">
+                                                </a>
+                                                <a href="@img/product/05.webp" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                                                    <img src="@img/product/05.webp" class="cover-image" alt="Фото товара">
+                                                </a>
+                                                <a href="@img/product/06.webp" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                                                    <img src="@img/product/06.webp" class="cover-image" alt="Фото товара">
+                                                </a>
+                                                <a href="@img/product/07.webp" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                                                    <img src="@img/product/07.webp" class="cover-image" alt="Фото товара">
+                                                </a>
+                                                <a href="@img/product/08.webp" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                                                    <img src="@img/product/08.webp" class="cover-image" alt="Фото товара">
+                                                </a>
+                                                <a href="@img/product/09.webp" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                                                    <img src="@img/product/09.webp" class="cover-image" alt="Фото товара">
+                                                </a>
+                                                <a href="@img/product/10.webp" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                                                    <img src="@img/product/10.webp" class="cover-image" alt="Фото товара">
+                                                </a>
+                                                <a href="@img/product/11.webp" data-fancybox="product-gallery" class="product-card__slide swiper-slide">
+                                                    <img src="@img/product/11.webp" class="cover-image" alt="Фото товара">
+                                                </a>
+                                            </div>
+                                            <button type="button" class="product-card__prev swiper-button-prev"></button>
+                                            <button type="button" class="product-card__next swiper-button-next"></button>
+                                        </div>
+                                        <div class="product-card__slider-thumbs swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="product-card__slider-thumb swiper-slide">
+                                                    <img src="@img/product/01.webp" class="cover-image" alt="Фото товара">
+                                                </div>
+                                                <div class="product-card__slider-thumb swiper-slide">
+                                                    <img src="@img/product/02.webp" class="cover-image" alt="Фото товара">
+                                                </div>
+                                                <div class="product-card__slider-thumb swiper-slide">
+                                                    <img src="@img/product/03.webp" class="cover-image" alt="Фото товара">
+                                                </div>
+                                                <div class="product-card__slider-thumb swiper-slide">
+                                                    <img src="@img/product/04.webp" class="cover-image" alt="Фото товара">
+                                                </div>
+                                                <div class="product-card__slider-thumb swiper-slide">
+                                                    <img src="@img/product/05.webp" class="cover-image" alt="Фото товара">
+                                                </div>
+                                                <div class="product-card__slider-thumb swiper-slide">
+                                                    <img src="@img/product/06.webp" class="cover-image" alt="Фото товара">
+                                                </div>
+                                                <div class="product-card__slider-thumb swiper-slide">
+                                                    <img src="@img/product/07.webp" class="cover-image" alt="Фото товара">
+                                                </div>
+                                                <div class="product-card__slider-thumb swiper-slide">
+                                                    <img src="@img/product/08.webp" class="cover-image" alt="Фото товара">
+                                                </div>
+                                                <div class="product-card__slider-thumb swiper-slide">
+                                                    <img src="@img/product/09.webp" class="cover-image" alt="Фото товара">
+                                                </div>
+                                                <div class="product-card__slider-thumb swiper-slide">
+                                                    <img src="@img/product/10.webp" class="cover-image" alt="Фото товара">
+                                                </div>
+                                                <div class="product-card__slider-thumb swiper-slide">
+                                                    <img src="@img/product/11.webp" class="cover-image" alt="Фото товара">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-card__main">
+                                        <h1 class="product-card__title">Половая доска 35х160х6000 сорт "А"</h1>
+                                        <div class="product-card__info">
+                                            <div class="product__price">
+                                                <span class="product__price-value">1 200₽</span>
+                                                <span class="product__price-unit">за м² без НДС</span>
+                                            </div>
+                                            <div class="quantity-block">
+                                                <button type="button" class="quantity-block__btn minus">-</button>
+                                                <input type="number" name="product-quantity" class="quantity-block__input" value="1">
+                                                <button type="button" class="quantity-block__btn plus">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="product-card__actions">
+                                            <button type="button" class="product-card__action btn btn-primary btn-sm icon-cart">Купить</button>
+                                            <a href="#one-click-buy" data-fancybox class="product-card__action btn btn-secondary-outline btn-sm">Купить в 1 клик</a>
+                                            <div class="product__availability icon-check">В наличии</div>
+                                        </div>
+                                        <div class="product-card__btns">
+                                            <button type="button" class="product-card__btn icon-compare"></button>
+                                            <button type="button" class="product-card__btn favorite-btn"></button>
+                                            <button type="button" class="product-card__btn icon-share"></button>
+                                        </div>
+                                        <div class="product-card__props">
+                                            <div class="product-card__props-title">Технические характеристики:</div>
+                                            <ul class="product__props">
+                                                <li class="product__props-item">
+                                                    <span class="product__props-name"> Сорт: </span>
+                                                    <span class="product__props-value">"АВ"</span>
+                                                </li>
+                                                <li class="product__props-item">
+                                                    <span class="product__props-name">Материал:</span>
+                                                    <span class="product__props-value">Сосна, ель</span>
+                                                </li>
+                                                <li class="product__props-item">
+                                                    <span class="product__props-name">Влажность:</span>
+                                                    <span class="product__props-value">10-12%</span>
+                                                </li>
+                                                <li class="product__props-item">
+                                                    <span class="product__props-name">Количество:</span>
+                                                    <span class="product__props-value">в упаковке 3 шт</span>
+                                                </li>
+                                                <li class="product__props-item">
+                                                    <span class="product__props-name">Цена за штуку: </span>
+                                                    <span class="product__props-value">1150 руб</span>
+                                                </li>
+                                                <li class="product__props-item">
+                                                    <span class="product__props-name">Наличие:</span>
+                                                    <span class="product__props-value">В наличии на складе в Москве</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="product-card__benefits">
+                                    <li class="product-card__benefit">
+                                        <div class="product-card__benefit-icon">
+                                            <img src="@img/icons/delivery.svg" alt="Иконка">
+                                        </div>
+                                        <div class="product-card__benefit-desc">Доставка в день заказа. Собственный автопарк и водители.</div>
+                                    </li>
+                                    <li class="product-card__benefit">
+                                        <div class="product-card__benefit-icon">
+                                            <img src="@img/icons/wallet.svg" alt="Иконка">
+                                        </div>
+                                        <div class="product-card__benefit-desc">Гарантия возврата средств, если не устроит качество. Оплата после доставки.</div>
+                                    </li>
+                                    <li class="product-card__benefit">
+                                        <div class="product-card__benefit-icon">
+                                            <img src="@img/icons/cash.svg" alt="Иконка">
+                                        </div>
+                                        <div class="product-card__benefit-desc">Вся продукция имеет сертификаты качества. Отправляем фото перед отправкой.</div>
+                                    </li>
+                                </ul>
+                                <div class="product-card__tabs tabs">
+                                    <div class="tabs__btns">
+                                        <button type="button" class="tabs__btn active">Описание</button>
+                                        <button type="button" class="tabs__btn">Доставка</button>
+                                        <button type="button" class="tabs__btn">Оплата</button>
+                                    </div>
+                                    <div class="tabs__contents">
+                                        <div class="tabs__content active">
+                                            <p>Пиломатериал предназначен для создания экологически безопасного покрытия. Половая доска производится из цельного массива древесины, для удобной укладки отдельных элементов предусмотрена система «шип-паз». После монтажа поверхность выглядит монолитной, не имеет щелей на стыках.</p>
+                                            <p>Материал предназначен для устройства полов в различных помещениях: жилых комнатах, детских, гостиных, кухнях, на балконах и лоджиях. Изделия обладают высокой прочностью, надежны и долговечны в эксплуатации. При необходимости ремонта легко снять поверхностный слой и нанести новое покрытие.</p>
+                                        </div>
+                                        <div class="tabs__content">
+                                            <p>Компания «СеверЛесГруп» доставляет пиломатериалов по всей территории России.. Работники компании создают оптимальные условия для перевозки строительных материалов, строго придерживаются норм транзита, указанных в ГОСТах.</p>
+                                            <p>Стоимость доставки рассчитывается менеджером индивидуально для каждого клиента. Основными ценообразующими факторами являются:</p>
+                                            <ul>
+                                                <li>Отдаленность объекта от нашего склада. Для каждого вида транспорта установлена покилометровая тарификация.</li>
+                                                <li>Объемы заказа. В зависимости от количества приобретенных товаров используются разные машины.</li>
+                                            </ul>
+                                            <p>Получить заказ можно в течение нескольких часов после оплаты, при наличии свободного автотранспорта. При оформлении мы согласуем с вами удобный день и время. Предварительно перед выездом, мы обязательно позвоним вам.</p>
+                                        </div>
+                                        <div class="tabs__content">
+                                            <p>Компания «СеверЛесГруп» сотрудничает с юридическими и физическими лицами. Мы предоставляем удобные условия оплаты и оставляем выбор способа передачи средств за клиентом.</p>
+                                            <h3>Для физических лиц доступны следующие варианты:</h3>
+                                            <ul>
+                                                <li><strong>Наличными в офисе:</strong> Москва, город Химки, Рабочая улица, 2Ак12. Приходите к нам, оформляйте заказ и сразу рассчитывайтесь за него. Если необходимо, мы сразу включим стоимость доставки и разгрузки в общую сумму. Если же у вас в данный момент окажутся деньги только на товар, за транспортировку и погрузочно-разгрузочные услуги можно будет расплатиться уже на объекте;</li>
+                                                <li><strong>Наличными при доставке.</strong> После приема товара водитель-экспедитор предоставит накладную, по которой вы рассчитаетесь. После этого он передаст документы, подтверждающие оплату;</li>
+                                                <li><strong>На карту Сбербанка.</strong> С помощью интернет-банкинга можно перевести деньги не выходя из дома. Зачисление происходит практически мгновенно.</li>
+                                            </ul>
+                                            <p>Юридические лица могут рассчитаться наличными в офисе или при получении, а также безналичным расчетом. В последнем случае менеджер фирмы сформирует и отправит вам счет-фактуру, который нужно распечатать и обратиться с ним в отделение любого банка. При этом стоит учитывать, что перевод может происходить до 3 банковских дней. Товар будет предоставлен при фактическом зачислении средств на наш счет. Ввиду этого рекомендуем расплачиваться наличными – при выборе этого метода вы можете быть уверены, что получите приобретенные пиломатериалы точно в указанный срок.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
+                </section>
                 @@include('html/_benefits.html', {})
+                <section class="products">
+                    <div class="products__container">
+                        <h2 class="products__title">Ранее смотрели</h2>
+                        <div class="products__content">
+                            <div class="products__slider swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/templates/_product.html', './html/json/views.json')
+                                </div>
+                                <button type="button" class="products__prev swiper-button-prev"></button>
+                                <button type="button" class="products__next swiper-button-next"></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="products">
+                    <div class="products__container">
+                        <h2 class="products__title">Рекомендуемые товары</h2>
+                        <div class="products__content">
+                            <div class="products__slider swiper">
+                                <div class="swiper-wrapper">
+                                    @@loop('./html/templates/_product.html', './html/json/home-news.json')
+                                </div>
+                                <button type="button" class="products__prev swiper-button-prev"></button>
+                                <button type="button" class="products__next swiper-button-next"></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 @@include('html/_purchase.html', {})
-
             </main>
             @@include('html/_footer.html', {})
             @@include('html/_modal.html', {})
             @@include('html/_js.html', {})
-        </div>
+            </div>
     </body>
 </html>
