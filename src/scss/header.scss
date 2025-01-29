@@ -283,11 +283,12 @@
 		height: rem(45);
 		font-size: 1.35rem;
 		border-radius: rem(6);
-		background: $accent;
+		background: $brown;
 		color: $white;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
 		&.icon-heart {
 		}
 		&.icon-compare {
@@ -297,6 +298,7 @@
 		&.icon-phone {
 		}
 		&.icon-whatsapp {
+			background: $accent;
 		}
 		&.icon-telegram {
 			background: #5cb1e5;
